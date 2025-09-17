@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT FORM</title>
+</head>
+<style>
+    label{
+        font-size: 15px;
+    }
+    form{
+        
+        margin:10px -220px 0px 400px;
+        
+        border-radius: 30px;
+       
+    }
+    legend{
+        color: rgb(0, 0, 0);
+     
+    }
+    fieldset{
+        background-color: rgb(209, 209, 209);
+         border: 5px solid gray;
+        border-radius: 30px;
+    }
+    footer{
+        
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+<body>
+      <header>    <h1 style="text-align: center; font-size: 50px; background-color: rgb(245, 245, 245);">HTML FORMS</h1>
+    <nav style=" background-color: rgb(85, 85, 85); text-align: center; font-size: 20px; ">
+        <a style="color:white; text-decoration: none; padding-right: 10px;" href="">Home</a>
+        <a style="color:white; text-decoration: none;padding-right: 10px;" href="">About</a>
+        <a style="color:white; text-decoration: none;padding-right: 10px;" href="">Contact</a></nav>
+    </header>
+   <div style="align-items: center; width: 50%; margin-top: 10px;">
+    <form>
+        <fieldset >
+           <center> <legend>Student registeration form</legend></center>
+
+           <br>
+        <br>
+            <label for="sname">Student name :</label>
+            <input type="text" id="sname" name="sname" placeholder="enter your name">
+            <br>
+            <br>
+
+            <label for="rollno">Roll No :</label>
+            <input type="text" id="rollno" name="rollno" placeholder="enter the rollno">
+            <br>
+            <br>
+
+            <label for="Email">Email :</label>
+            <input type="email" id="Email" name="Email" placeholder="enter your email" >
+            <br>
+            <br>
+            
+            <label for="mono">Mobile number :</label>
+            <input type="number" id="mono" name="mono" placeholder="enter the phone number" >
+            <br>
+            <br>
+
+            <label for="dob">DOB : </label>
+            <input type="date" id="dob" name="dob">
+            <br>
+            <br>
+            <label for="ID card">ID Card : </label>
+            <input type="file" id="ID Card" name="ID card">
+            <br>
+            <br>
+            <label for="Gen">Gender :</label>
+            <input type="radio" id="male" name="Gen" >
+             <label for="male">Male </label>
+           
+            <input type="radio" id="female" name="Gen" >
+             <label for="female">Female </label>
+            <br>
+            <br>
+
+            <label for="address">Address</label>
+            <br>
+            <textarea id="address" name="address" rows="5" cols="30" placeholder="enter your address"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="submit" style="color: blue; ">
+            <input type="reset" value="reset" style="color: rgb(255, 8, 0);">
+        
+        </fieldset>
+    </form>
+    </div>
+    <footer>
+        © 2024 My First HTML Form
+    </footer>
+
+    
+</body>
+</html>
