@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEX BOX</title>
+    <style>
+        header{
+            background-color: rgb(223, 223, 223);
+            background-attachment: fixed;
+            padding: 20px;
+        }
+        header h1{
+            text-align: center;
+            font-weight: 900;
+            font-family: Arial;
+        }
+        .flex-con{
+            display: flex;
+            background-color: rgb(31, 31, 31);
+            padding: 10px;
+            justify-content: center;
+        }
+        .flex-con a{
+            margin-right: 30px;
+            text-decoration: none;
+            font-weight: 300;
+            font-family: monospace ;
+            font-size: 19px;
+            color: white;
+        }
+        .grin{
+            margin: 50px 100px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 50px;
+            text-align: center;
+            
+        }
+        .grin div{
+            background-color: rgb(0, 129, 11);
+            padding: 20px;
+        }
+
+        @media (max-width:780px) {
+            .flex-con{
+                flex-direction: column;
+                text-align: center;
+                line-height: 30px;
+            }
+            .flex-con a{
+                width: 100%;
+                text-decoration: underline;
+                margin-bottom: 10px;
+            } 
+            .grin{
+            margin: 50px 100px 50px 100px;
+            display: grid;
+            grid-template-columns: auto ;
+            gap: 50px;
+            text-align: center;
+            }  
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS FLEX BOX</h1>
+       
+    </header>
+     <div class="flex-con">
+           <div> <a href="#">Home</a></div>
+            <div> <a href="#">About</a></div>
+            <div><a href="#">Service</a></div>
+            <div> <a href="#">Contact</a></div>
+        </div>
+
+        <div class="grin">
+            <div>Content Box 1</div>
+            <div>Content Box 2</div>
+            <div>Content Box 3</div>
+            <div>Content Box 4</div>
+            <div>Content Box 5</div>
+            <div>Content Box 6</div>
+
+        </div>
+        <footer style="position:fixed ; width:100%; padding: 10px; bottom:0; text-align: center; background-color: lightgrey;">@2024 flexbox</xfooter>
+
+</body>
+</html>
