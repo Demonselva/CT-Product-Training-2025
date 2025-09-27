@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo_list</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .black-bo{
+            border: 1px solid black;
+            height: fit-content;
+            padding: 5px;
+        }
+        .ToDo-form{
+            border: 1px solid rgb(65, 255, 255);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .delete-btn{
+            background-color: rgb(255, 22, 22);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            width: 50%;
+
+          
+        }
+        .table-style{
+            width: 100%;
+            border-collapse:collapse ;
+            border-spacing: 0px 5px ;
+            text-align: center;
+            
+        }
+
+        td{
+            padding: 10px;
+            border-bottom:1px solid #ccc;
+        }
+        .add-btn{
+            padding: 10px;
+            width: 30%;
+            margin-left: 10px;
+            background-color: rgb(97, 97, 255);
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        input[type="text"]{
+            width: 60%;
+            padding: 10px;
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <div class="black-bo">
+        <div class="ToDo-form">
+            <h1>To-Do List</h1>
+            <form name="ToDoForm"  method="post" onsubmit="return add_list_item()"> 
+                <input type="text" name="List_item"  placeholder="Enter new task">  
+                <input type="submit" value="Add Task" class="add-btn">
+            </form> 
+            <table id="table"  class="table-style">
+
+            </table>
+        </div>
+    </div>
+
+    <div></div>
+
+    <script>
+        function add_list_item(){
+        
+            event.preventDefault();
+            let table=document.getElementById("table");
+            let task_input=document.forms['ToDoForm']['List_item'].value;
+            if (task_input==''){
+                alert("enter the task");
+                event.preventDefault();
+            }
+            else{
+                let row=document.createElement("TR");
+            let ch=document.createElement("INPUT");
+            ch.setAttribute("type","checkbox");
+
+            ch.className="check-box";
+                
+            ch.addEventListener("click",()=>
+            {
+                if(ch.checked){
+                    col2.style.textDecoration="line-through";
+                }else{
+                    col2.style.textDecoration="none";
+                }
+                
+            })
+            let task=document.createTextNode(task_input);
+            let btn=document.createElement("BUTTON");
+            btn.onclick=function(){
+                row.remove();
+            }
+            
+
+            
+            btn.append('Delete');
+            
+            btn.className="delete-btn";
+
+
+
+            let col1=document.createElement("TD")
+            col1.style.textAlign="left";
+            let col2=document.createElement("TD")
+            col2.style.fontSize="20px";
+            let col3=document.createElement("TD")
+            col3.style.textAlign="right";
+
+            col1.appendChild(ch);
+            col2.appendChild(task);
+            col3.appendChild(btn);
+
+            row.appendChild(col1)
+            row.appendChild(col2)
+            row.appendChild(col3)
+
+            table.appendChild(row)
+            
+            document.forms['ToDoForm']['List_item'].value='';
+            
+            }
+            
+            
+
+
+
+            
+            
+            
+            
+
+        }
+        
+            
+          
+        
+
+        
+            
+
+            
+         
+       
+            
+         
+
+            
+        
+      
+        
+    </script>
+    
+</body>
+</html>

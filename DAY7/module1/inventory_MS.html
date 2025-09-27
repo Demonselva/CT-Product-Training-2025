@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory management system</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .border{
+            border: 1px solid rgb(65, 255, 239);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .border-sec{
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        form input{
+            padding: 10px;
+            width: 94%;
+            margin-top: 10px;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background-color: rgb(20, 103, 255);
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="border">
+        <div class="border-sec">
+            <h1>Inventory System</h1>
+            <form name="inventory-form" method="post" onsubmit="return product()">
+                <label for="name">Name :</label> <br>
+                <input type="text" id="name" name="product-name" placeholder="enter product name"> <br><br>
+                <label for="price">Price : </label><br>
+                <input type="number" id="price" name="product-price" placeholder="enter product price"> <br> <br>
+                <label for="qty">Quantity :</label><br>
+                <input type="number" id="qty" name="product-qty" placeholder="enter product qty"> <br> <br>
+                <input type="submit" value="Add Product" >
+            </form>
+            <div class="inventory-list">
+                <h3>Inventory List</h3>
+                <table id="table" style="border-collapse: collapse; text-align: left;" width="100%">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div></div>
+
+    <script>
+        function product(name,price,quantity){
+            this.name;
+            this.price;
+            this.quantity;
+            
+            
+
+        }
+        pname=document.forms["inventory-form"]["product-name"].value;
+        price=document.forms["inventory-form"]["product-price"].value;
+        quantity=document.forms["inventory-form"]["product-qty"].value;
+
+
+        
+        
+
+    </script>
+</body>
+</html>
