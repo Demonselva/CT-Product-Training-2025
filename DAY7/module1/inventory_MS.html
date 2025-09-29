@@ -41,7 +41,7 @@
     <div class="border">
         <div class="border-sec">
             <h1>Inventory System</h1>
-            <form name="inventory-form" method="post" onsubmit="return product()">
+            <form name="inventory-form" method="post" onsubmit="return products()">
                 <label for="name">Name :</label> <br>
                 <input type="text" id="name" name="product-name" placeholder="enter product name"> <br><br>
                 <label for="price">Price : </label><br>
@@ -58,6 +58,9 @@
                         <th>Price</th>
                         <th>Quantity</th>
                     </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -65,25 +68,48 @@
     <div></div>
 
     <script>
-        function product(name,price,quantity){
-            this.name;
-            this.price;
-            this.quantity;
+        class Product{
+            constructor(name,price,quantity){
+            this.name=name;
+            this.price=price;
+            this.quantity=quantity;
+            }
             
             
 
         }
-        pname=document.forms["inventory-form"]["product-name"].value;
-        price=document.forms["inventory-form"]["product-price"].value;
-        quantity=document.forms["inventory-form"]["product-qty"].value;
+        inventory=[]
+        function products(){ 
+            event.preventDefault();
+            pname=document.forms["inventory-form"]["product-name"].value;
+            price=document.forms["inventory-form"]["product-price"].value;
+            quantity=document.forms["inventory-form"]["product-qty"].value;
+            const product=new Product(pname,price,quantity);
 
+            inventory.push(product);
+            alert("success")
+            display()
+        
+
+        }
+        function display(){
+            tbody =document.getElementById('tbody');
+            tbody.innerhtml='';
+            inventory.foreach(product=>{
+                const row=`<tr>
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td>${product.quantity}</td>
+                    </tr>`
+                tbody.innerhtml=row;
+
+            })
+            
+        }
 
         
         
 
     </script>
 </body>
-
 </html>
-
-
