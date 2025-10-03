@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user Dashboard</title>
+    <script src="https://kit.fontawesome.com/22ac3c2394.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            top: 0;
+            font-family:Arial, Helvetica, sans-serif ;
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+           background:linear-gradient(45deg,rgb(116, 52, 177), #2afff4d7,rgb(5, 139, 180));
+            background-size: 300%;
+            
+            
+        }
+
+        .sidebar{
+            display: grid;
+            grid-template-rows: 10% 30% 10%  ;
+          background: linear-gradient(45deg, #fdfdfd, #7873f5, #ff87ff);
+            gap: 20px;
+            padding: 20px;
+            border-right:1px solid white ;
+            box-shadow: 10px 5px 40px rgb(233, 121, 255);
+            height: 100%;
+            
+        }
+        .nav-brand{
+           
+            align-items: center;
+            text-align: center;
+            font-family: cursive;
+            font-size: 23px;
+        }
+        .sidebar .nav a{
+            display: flex;
+            flex-direction: row;
+            line-height: 30px;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            
+            transition: transform 0.7s ease-in-out;
+            border-radius: 5px ;
+        }
+        .sidebar .nav a:hover {
+            transform: scale(1.05);
+            color: white;
+            background:linear-gradient(45deg,rgb(116, 52, 177), #2afff4d7,rgb(5, 139, 180));
+            background-size: 300%;
+            animation: gradientAnimation 6s infinite alternate ;
+
+
+        }
+        .sidebar .nav a::before{
+            content: "▸";
+            margin-right: 4px;
+        }
+        .sidebar .footer{
+            align-items: center;
+            margin-top: 200px;
+        }
+        .main {
+            display: grid;
+            grid-template-rows:20% 20% 60%;
+        }
+        .main .header{
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 3fr 4fr 2fr;
+             background: linear-gradient(45deg, #66e0ff, #7873f5, #ff87ff);
+            background-size: 300%;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            transition:0.4s ease-in-out;
+            animation: gradientAnimation 6s infinite alternate ;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+         }
+
+            .main .header:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+            }
+
+            .main .sub-main .sec1{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap:20px;
+                height: 15vh;
+                margin: 30px;
+                text-align: center;
+                
+            } 
+            .main .sub-main .sec1 .Total-appoinment{
+                background:linear-gradient(to right,white 1%,rgb(237, 176, 255) 100%) ;  
+                border: 1px solid #ccc;
+                border-radius: 20px; 
+                padding: 10px;
+                transition: transform 0.9s ease-in-out;             
+            }
+            
+            .main .sub-main .sec1 .Total-appoinment:hover{
+                transform: scale(1.05);
+            }
+
+        
+
+        @media (max-width:768px){
+            
+            .container{
+                grid-template-columns: 100%;
+                 
+            }
+            .sidebar{
+                grid-template-rows: 1fr;
+                background:none;
+                box-shadow: none;
+            }
+            
+            .footer{
+                display:none;
+            }
+            .main{
+                grid-template-rows: 45% 30% 30%;
+            }
+            .main .header{
+                grid-template-columns: 2fr 2fr;
+            }
+            .main .sub-main .sec1 {
+                grid-template-columns: 1fr;
+            }
+            .main .sub-main .sec1 .Total-appoinment{
+                border-radius: 9px;
+                margin-bottom: 16px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- side bar -->
+        <div class="sidebar">
+            <div class="nav-brand"><h5>Doctor plus</h5></div>
+            <div class="nav">
+                <div><a href="#">home</a></div>
+                <div><a href="#">home</a></div>
+                <div><a href="#">home</a></div>
+                <div><a href="#">home</a></div>
+            </div>
+            <div class="footer">contact us: <br> <br>
+            <b>91+987654321X</b></div>
+        </div>
+        <!-- right side main -->
+        <div class="main">
+            <div class="header-main">
+                <div class="header">
+                    <div class="welcome">Welcome to User dashboard </div>
+                    <div class="empty"></div>
+                    <div class="account"><h1>acc</h1></div>
+                </div>
+            </div>
+            <div class="sub-main">
+                <div class="sec1">
+                    <div class="Total-appoinment">Total <br><span >$400</span></div>
+                    <div class="Total-appoinment">History <br><span >$400</span></div>
+                </div>
+            </div>
+            <div></div>
+          
+        </div>
+        
+    
+    
+        
+    </div>
+     <footer style=" bottom: 0; text-align: center; background-color: #ccc; width: 100%; padding: 10px;">@copyright</footer>
+
+    
+    
+</body>
+</html>
