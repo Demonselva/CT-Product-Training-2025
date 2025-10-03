@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .buttons{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .buttons button{
+            font-size: 20px;
+            height: 40px;
+            width: 40px;
+        }
+        .cal-body{
+            margin: 100px 0px 20px 70px;
+           
+            border: 1px solid rgb(0, 247, 255);
+            padding: 5px;
+            border-radius: 4px;
+            width: 52%;
+          
+        }
+        .cal-sbody{
+            border: 1px solid rgb(0, 0, 0);
+            padding: 11px;
+            
+        }
+        #form input{
+            width: 96%;
+            height: 30px;
+            text-align: right;
+        }
+        @media (max-width:768px) {
+            body{
+                grid-template-columns: 1fr;
+            }
+             .buttons{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 3px;
+             }
+             .buttons button{
+                height: 30px;
+                width: 30px;
+                font-size: 10px;
+             }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="cal-body">
+        <div class="cal-sbody">
+            <form id="form">
+                <input type="text" id="display" value="0" >
+            </form>
+            <div class="buttons">
+                
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>/</button>
+                
+                
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>*</button>
+                
+                
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>-</button>
+                
+                
+                <button>0</button>
+                <button>C</button>
+                <button>=</button>
+                <button>+</button>
+            
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>

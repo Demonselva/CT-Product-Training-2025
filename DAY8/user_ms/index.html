@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User management System</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .aqua-bo{
+            border: 1px solid aqua;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .black-bo{
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        .addu{
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .forms label{
+            font-size: 15px;
+        }
+        .forms input{
+            height: 25px;
+            border:1px solid #ccc ;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .forms select,option{
+            height: 35px;
+            border:1px solid #ccc ;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        #add-btn{
+            border: none;
+            background-color: rgb(63, 92, 255);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width:120px;
+        }
+        table{
+            border-collapse: separate;
+            border-spacing: 10px 10px;
+            width: 100%;
+        }
+        td{
+            border-bottom: 1px solid #ccc;
+        }
+        table button{
+            padding: 10px;
+            border: none;
+            margin-bottom: 10px;
+            background-color: rgb(68, 68, 255);
+            color: white;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="aqua-bo">
+        <div class="black-bo">
+            <div class="addu">Add User</div>
+
+            <hr size="1px" color="#ccc" >
+
+            <div class="forms" id="forms">
+                <form >
+                    <label for="name"> Name :</label>
+                    <input type="text" id="name" placeholder="enter name">
+                    <label for="email"> Email :</label>
+                    <input type="email" id="email" placeholder="enter Email">
+                    <label for="role"> Role :</label>
+                    <select name="role" id="role">
+                        <option value="" disabled selected>Select the Role</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Student">Student</option>
+                    </select>
+                    <button  id="add-btn" type="submit" onclick="adduser()">Add User</button>
+                    
+                </form>
+            </div>
+
+            <br>
+            <div class="addu">User List</div>
+
+            <hr size="1px" color="#ccc" >
+
+            <div class="user-table">
+                <table  >
+                    <thead>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+   
+
+
+
+    <div></div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
