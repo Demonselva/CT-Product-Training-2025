@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user Dashboard</title>
+    <script src="https://kit.fontawesome.com/22ac3c2394.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            top: 0;
+            font-family:Arial, Helvetica, sans-serif ;
+            
+            
+            
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 4.5fr;
+           background:linear-gradient(45deg,rgb(116, 52, 177), #2afff4d7,rgb(5, 139, 180));
+            background-size: 300%;
+           
+            
+            
+            
+        }
+
+        .sidebar{
+            display: grid;
+            grid-template-rows: 10% 30% 10%  ;
+            background: linear-gradient(45deg, #fdfdfd, #7873f5, #ff87ff);
+            gap: 20px;
+            padding: 20px;
+            height: 100%;
+        }
+        .nav-brand{
+           
+            align-items: center;
+            text-align: center;
+            font-family: cursive;
+            font-size: 30px;
+            color: rgba(7, 0, 102, 0.966);
+            text-shadow: 1px 1px 20px rgb(194, 0, 161);
+            
+        }
+        .sidebar .nav{
+            margin-top: 20px;
+        }
+       
+        .sidebar .nav a{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            line-height: 30px;
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(0, 9, 88);
+            font-weight: 700;
+            transition: transform 0.7s ease-in-out;
+            border-radius: 5px ;
+        }
+       
+        .sidebar .footer{
+            align-items: center;
+            margin-top: 200px;
+        }
+        .main {
+            
+            min-height: 100vh;
+        }
+        .main .header{
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 4fr 3fr 2fr;
+             background: linear-gradient(45deg, #66e0ff, #7873f5, #ff87ff);
+            background-size: 300%;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            transition:0.4s ease-in-out;
+            animation: gradientAnimation 6s infinite alternate ;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+         }
+         .main .header .welcome{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            color: rgb(0, 29, 83);
+         }
+         .main .header .dropdown .account{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+         }
+          .main .header .dropdown .account img{
+            border-radius: 15px;
+            height: 30px;
+            width: 30px;
+            border: 3px solid rgb(14, 0, 95);
+          }
+
+         
+         .dropdown {
+            position: relative;
+            color: darkblue;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 10px;
+           
+            }
+
+            .dropdown-content {
+            display: none;
+            position: absolute;
+            border-radius: 10px;
+            background: linear-gradient(45deg,rgb(221, 109, 255),rgb(131, 255, 245));
+            min-width: 130px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            transition: transform 0.9s ease-in-out;
+       
+            }
+            .dropdown-content .item div{
+                width: 160px;
+                display: flex;
+                border-radius: 8px;
+            }
+            .dropdown-content .item div:hover{
+
+                background-color: #00d9ff;
+                
+            }
+            .dropdown-content a{
+                text-decoration: none;
+                font-family:monospace;
+                font-size: 13px;
+                color: rgb(0, 2, 94);
+                line-height: 10px;
+                padding: 10px;
+                border-radius: 10px;
+             
+            }
+            
+            .dropdown:hover .dropdown-content {
+            transform: scale(1.2);
+            display: block;
+           
+            }
+         .sub-main{
+            background-color: white;
+            margin: 20px;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: #edc7ff93;
+            box-shadow: 0px 0px 5px #6e6e6e;
+            transition: transform 0.6s ease-in-out ;
+           
+         }
+         .sub-main:hover{
+            transform: scale(1.004);
+         }
+
+            @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+            }
+
+            .main .sub-main .sec1{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap:20px;    
+                margin: 30px;
+                text-align: center;
+                
+            } 
+
+            
+       
+
+        
+
+        @media (max-width:768px){
+            
+            .container{
+                grid-template-columns: 100%;
+                 
+            }
+            .sidebar{
+                grid-template-rows: 1fr;
+                background:none;
+                box-shadow: none;
+            }
+            .sidebar .nav {
+                margin-top: -30px;
+            }
+            
+            .footer{
+                display:none;
+            }
+            
+            .main .header{
+                grid-template-columns: 1fr;
+            }
+            .main .header .welcome{
+               text-align: center;
+            }
+            .main .sub-main .sec1 {
+                grid-template-columns: 1fr;
+            }
+           
+            
+        }
+        
+            .main .header:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            }
+                 
+           
+             .sidebar .nav a:hover {
+                transform: scale(1.05);
+                color: white;
+                background:linear-gradient(45deg,rgb(116, 52, 177), #2afff4d7,rgb(5, 139, 180));
+                background-size: 300%;
+                animation: gradientAnimation 6s infinite alternate ;
+           }
+          
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- side bar -->
+        <div class="sidebar">
+            <div class="nav-brand"><h5><i class="fa-solid fa-dna" style="columns:blue; font-size: 40px;"></i><sup> Doctor plus</sup></h5></div>
+            <div class="nav">
+                <div><a onclick="Homescreen()" ><i class="fa-solid fa-house"></i><span style=" margin-left: 5px;" >Home</span></a></div>
+                <div><a onclick="BookAppointment()"><i class="fa-solid fa-book"></i><span style=" margin-left: 5px;" >Book Appointment</span>  </a></div>
+                <div><a onclick="AppointmentHistory()"><i class="fa-solid fa-clock-rotate-left"></i><span style="margin-left: 5px;" >   History</span></a></div>
+                <div><a onclick="Aboutus()"><i class="fa-solid fa-users"></i><span style="margin-left: 5px;" >About us</span></a></div>
+
+                
+            </div>
+            <div></div>
+        </div>
+        <!-- right side main -->
+        <div class="main">
+            <div class="header-main">
+                <div class="header">
+                    <div class="welcome"> <span id="greeting"></span> Profile <i class="fa-solid fa-user"></i>  </div>
+                   <div></div>
+                    <div class="dropdown" >
+                        <div class="account">
+                        <div style="margin-right: 10px;"><img src="./photos/profile2.jpg" alt="pic" ></i></div>
+                        <div class="dropdown" ><h1 id="acc-name">Selva Kumar<i class="fa-solid fa-sort-down" style="margin-left: 5px;"></i> </h1> </div>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="item">
+                                <div><a href="user_login.html"><i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>Logout</a> <br> <br></div>
+                                <div><a onclick="updateprofile()"><i class="fa-solid fa-id-card" style="margin-right: 5px;"></i>Update Profile</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-main">
+                <div class="sec1">
+                    <div class="name">
+                        <h1>Name</h1>
+                        <input type="text" id="name"  value="ss" readonly> 
+                    </div>
+                    <div class="contact-details">
+                        <h1>Contact details</h1>
+                        <input type="text"  value="jindo123" id="email" disabled>
+                        <input type="text" id="phonenumber" value="111" readonly> <br>
+                    </div>
+                    <div class="change-pass">
+                         <button onclick="changepass()"> Change password</button>
+                    </div>
+                     
+                       
+                    </form>
+                
+
+                 </div>
+            </div>
+        
+         </div>
+     <footer style=" bottom: 0; text-align: center; background-color: #ccc; width: 100%; padding: 10px;">@copyright</footer>
+
+    
+    <script>
+        const params=new URLSearchParams(window.location.search);
+        const id=parseInt(params.get("id"));
+
+        const users=JSON.parse(localStorage.getItem("users"))||"";
+
+
+        const user=users.find(u=>u.id===id);
+
+        document.getElementById("acc-name").innerHTML=user.email+ `<i class="fa-solid fa-sort-down" style="margin-left: 5px;">`;
+        document.getElementById("greeting").innerHTML=user.name;
+
+        document.getElementById("email").value=user.email;
+        document.getElementById("phonenumber").value=user.password;
+        document.getElementById("name").value=user.name;
+
+        function changepass(){
+            const currentpass=prompt("enter the curren password");
+            const newpass=prompt("enter the new password");
+            const okconfirm=confirm("change password");
+            if (okconfirm){
+                user.password=newpass;
+                alert(`password changed by ${user.name}`)
+                event.preventDefault()
+            }
+        }
+        function Homescreen(){
+            window.location.href=`user_dashboard.html?id=${id}`;
+        }
+        function BookAppointment(){
+            window.location.href=`user_booking.html?id=${id}`;
+        }
+        function AppointmentHistory(){
+            window.location.href=`user_booking_history.html?id=${id}`;
+        }
+        function updateprofile(){
+            window.location.href=`user_profile.html?id=${id}`;
+        }
+        function Aboutus(){
+             window.location.href=`user_aboutus.html?id=${id}`
+        }
+
+    </script>
+</body>
+</html>
