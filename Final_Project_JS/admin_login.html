@@ -13,7 +13,19 @@
       justify-content: center;
       align-items: center;
       background: linear-gradient(135deg, #ff9966, #ff5e62);
+      animation: bg 6s infinite alternate;
+      background-size: 20%;
     }
+    @keyframes bg {
+      0%{
+        background-position:0% 50% ;
+      }
+  
+      100%{
+        background-position: 50% 0%;
+      }
+    }
+
 
     .container {
       background: white;
@@ -23,13 +35,15 @@
       max-width: 95%;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       text-align: center;
-      animation: fadeIn 0.6s ease;
+      animation: fadeIn 0.9s ease;
+      
     }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateX(0px); }
     }
+    
 
     h1 {
       margin-bottom: 20px;

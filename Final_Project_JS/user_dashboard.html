@@ -188,7 +188,7 @@
             .main .sub-main .sec1 .Total-appoinment{
                 background:linear-gradient(165deg,rgb(133, 205, 247),rgb(222, 57, 255)) ;  
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 4fr;
                 height: 90px;
                 align-items: center;
                 background-size: 300%;  
@@ -235,6 +235,35 @@
                 font-size: 1.1em;
                 cursor: pointer; 
                 transition: background-color 0.3s ease; 
+            }
+            .sec1-right {
+                
+                color: white; 
+                padding: 0px 25px;
+                border: none; 
+                border-radius: 5px; 
+                font-size: 1.1em;
+
+
+              
+            }
+            .sec1-right span{
+                line-height: 30px;
+                color: darkblue;
+                font-weight: 800;
+
+            }
+            .card-icon {
+                background-color: #00065a; 
+                color: white; 
+                padding: 12px ;
+               
+                border-radius: 30px; 
+                font-size: 1.5em;
+                width:100%;
+             
+             
+                
             }
 
 
@@ -336,7 +365,7 @@
                         </div>
                         <div class="dropdown-content">
                             <div class="item">
-                                <div><a href="user_login.html"><i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>Logout</a> <br> <br></div>
+                                <div><a href="index.html"><i class="fa-solid fa-right-to-bracket" style="margin-right: 5px;"></i>Logout</a> <br> <br></div>
                                 <div><a onclick="updateprofile()"><i class="fa-solid fa-id-card" style="margin-right: 5px;"></i>Update Profile</a></div>
                             </div>
                         </div>
@@ -346,26 +375,26 @@
             <div class="sub-main">
                 <div class="sec1">
                     <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-house"></i></div>
-                        <div> Total <br><span >$400</span></div>
+                        <div class="card-icon"> <i class="fa-solid fa-book"></i></div>
+                        <div class="sec1-right"> Total Appoinments <br><span id="Total-appointment">$400</span></div>
                     </div>
                     <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-house"></i></div>
-                        <div class="card-icon"> Total <br><span >$400</span></div>
+                        <div class="card-icon"> <i class="fa-solid fa-clock-rotate-left"></i></div>
+                        <div class="sec1-right"> Pending Appointments <br><span >$400</span></div>
                         
                         
                     </div>
                     <div class="Total-appoinment">
-                        <div> <i class="fa-solid fa-house"></i></div>
-                        <div> Total <br><span >$400</span></div>
+                        <div class="card-icon"> <i class="fa-solid fa-check"></i></div>
+                        <div class="sec1-right" > Accepted Appointments <br><span >$400</span></div>
                     </div>
                 </div>
                 <div class="sec2">
-                    <div class="left"><img src="./photos/profile2.jpg" alt="" ></div>
+                    <div class="left"><img src="./photos/Medibridge_JuniorDoctorRole.jpg" alt="" ></div>
                     <div class="right" >
                         <h1>Welcome to Online Appointment Booking !</h1>
                         <p>This is an platform where enabled public to have an direct appointment with doctor.</p>
-                        <button class="sec2-right" onclick="BookAppointment()">Learn More</button>
+                        <button class="sec2-right" onclick="BookAppointment()">Start Here</button>
                     </div>
                 </div>
 
@@ -389,6 +418,16 @@
 
 
         const user=users.find(u=>u.id===id);
+
+        const appoinments=JSON.parse(localStorage.getItem("appointments"))||"";
+
+        const user_appts=appoinments.filter(app=>app.id===id)
+
+    
+
+        const len=parseInt(user_appts.length);
+
+        document.getElementById("Total-appointment").innerHTML=len
 
         document.getElementById("acc-name").innerHTML=user.email+ `<i class="fa-solid fa-sort-down" style="margin-left: 5px;">`;
         document.getElementById("greeting").innerHTML=user.name;

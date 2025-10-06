@@ -82,6 +82,17 @@
             animation: gradientAnimation 6s infinite alternate ;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
          }
+         @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+            }
          .main .header .welcome{
             font-family:Verdana, Geneva, Tahoma, sans-serif;
             font-size: 25px;
@@ -97,83 +108,64 @@
             background-color: #ffffff53;
             box-shadow: 0px 0px 5px #6e6e6e;
             transition: transform 0.6s ease-in-out;
+            overflow-x: scroll;
            
          }
-         .sub-main:hover{
-            transform: scale(1.004);
+         
+         .sub-main table{
+            width: 100%;
+            margin: 20px;
+            border-collapse:separate ;
+            border-spacing:0px 5px ;
+            padding: 10px;
            
          }
-          .main .sub-main .sec1{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                column-gap:20px;    
-                margin: 30px;
-                text-align: center;
-                
-            } 
-            .main .sub-main .sec1 .Total-appoinment{
-             background:linear-gradient(45deg, #ff2222, #ff782f ,rgb(202, 0, 0)); 
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                height: 90px;
-                align-items: center;
-                background-size: 300%;  
-                border: 1px solid #bb000093;
-                border-radius: 20px; 
-                padding: 10px;
-                transition: transform 0.6s ease-in-out;             
-            }
-            .main .sub-main .sec1 .sec1-right{
-              font-family: fantasy;
-              color: #ffee00;
-            }
-            .main .sub-main .sec1 .sec1-right span{
-              font-family: cursive;
-              line-height: 25px;
-               color: #a51100;
-              
-              
-            }
-            .main .sub-main .sec1 .card-icon{
-              font-size: 50px;
-               border-radius: 40px;
-               
-               color: #8e0005;
-               
-             
-               margin-left: 40px;
-            }
+         th{
+            background-color: #ff000091;
 
-            .main .sub-main .sec2{
-              padding: 30px;
-              text-align: justify;
-              color: rgb(92, 0, 0);
-              background-color: #ff828243;
-              border-radius: 20px;
-              box-shadow: 0px 0px 10px rgba(255, 53, 53, 0.513) ;
-              margin: 20px;
-            }
+         }
+         tr{
+            background-color: rgba(255, 236, 236, 0.946);
+         }
+         td,th{
+            padding: 10px;
             
-            
+         }
 
-            @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-            }
-
-
-
-            
-       
-
+         td:first-child{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+         }
+          td:last-child{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+         }
         
+         tr:hover{
+            transform: scale(1.04);
+         }
+      
+      
+         .del-btn{
+                background-color: red;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+               
+            }
+            .edit-btn{
+                background-color: rgb(8, 0, 255);
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                margin-right: 10px;
+               
+            }
+            
+
+
 
         @media (max-width:768px){
             
@@ -200,13 +192,7 @@
             .main .header .welcome{
                text-align: center;
             }
-             .main .sub-main .sec1 {
-                grid-template-columns: 1fr;
-            }
-            .main .sub-main .sec1 .Total-appoinment{
-                border-radius: 9px;
-                margin-bottom: 16px;
-            }
+           
             
             
             
@@ -248,33 +234,23 @@
         <div class="main">
             <div class="header-main">
                 <div class="header" style="text-align: center;">
-                    <div class="welcome">Admin <span id="greeting"></span> 👋</div>
+                    <div class="welcome">Manage Appointments <i class="fa-solid fa-arrow-down"></i></div>
                 </div>
             </div>
             <div class="sub-main">
-               <div class="sec1">
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-users"></i></div>
-                        <div class="sec1-right"> Total Users <br><span  id="Total-user">$400</span></div>
-                    </div>
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-book"></i></div>
-                        <div class="sec1-right"> Total Appointments <br><span id="Total-appoinment">$400</span></div>
-                        
-                        
-                    </div>
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-stethoscope"></i></div>
-                        <div class="sec1-right"> Total Services <br><span >4</span></div>
-                    </div>
-                </div>
-                 <div class="sec2">
-                    <div class="right" >
-                        <h1>Welcome to Online Appointment Booking (Admin)!</h1>
-                        <p>This is an platform where enabled Admin to have an access to manage Service,users,appoinments.</p>
-                       
-                    </div>
-                </div>
+               <table style="text-align: left;">
+                <thead>
+                    <th>ID</th>
+                    <th>Service</th>
+                    <th>Provider</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+               </table>
                
             </div>
     
@@ -291,15 +267,7 @@
     <script>
        
 
-        const users=JSON.parse(localStorage.getItem("users"))||"";
-
-      const appointments=JSON.parse(localStorage.getItem("appointments"))||"";
-      const lenapp=appointments.length;
-
-
-        const length=users.length;
-        document.getElementById("Total-user").innerHTML=length;
-        document.getElementById("Total-appoinment").innerHTML=lenapp;
+        const appointments=JSON.parse(localStorage.getItem("appointments"))||"";
         function admindash(){
             window.location.href=`admin_dashboard.html`;
         }
@@ -313,6 +281,56 @@
         function Appointmentmanage(){
              window.location.href=`admin_manage_appointment.html`;
         }
+        const tabbody=document.getElementById("table-body")
+
+        appointments.forEach(appointment => {
+            const tr=document.createElement("TR");
+            const id=document.createElement("TD");
+            const service=document.createElement("TD");
+            const provider=document.createElement("TD");
+            const date=document.createElement("TD");
+            const time=document.createElement("TD");
+          
+            const del =document.createElement("TD");
+
+            const del_btn=document.createElement("button");
+            const edit_btn=document.createElement("button");
+            del_btn.append(document.createTextNode("cancel"));
+            edit_btn.append(document.createTextNode("Edit"));
+            edit_btn.className="edit-btn"
+            
+            del_btn.className="del-btn"
+
+            del_btn.addEventListener('click',()=>{
+               users.splice(index,1);
+               localStorage.setItem("users",json.stringify(users));
+               tr.remove();
+            })
+
+
+            
+
+            id.append(appointment.id)
+            service.append(appointment.service)
+            provider.append(appointment.provider)
+            date.append(appointment.date)
+            time.append(appointment.time)
+              del.append(edit_btn)
+            del.append(del_btn)
+          
+            
+
+            tr.appendChild(id);
+            tr.appendChild(service);
+            tr.appendChild(provider);
+            tr.appendChild(date);
+            tr.appendChild(time);
+            tr.append(del)
+
+            tabbody.appendChild(tr);
+            
+
+        });
 
         
 
