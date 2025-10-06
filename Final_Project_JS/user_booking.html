@@ -305,6 +305,64 @@
            .sec2-right:hover {
                 background-color: #0056b3; 
                 }
+                .containee  r {
+      width: 500px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4a74f7;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #3a5cd6;
+    }
+
+    .summary {
+      background: #eef3ff;
+      border: 1px solid #d3dcff;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
+    .confirmation {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
        
     </style>
 </head>
@@ -344,33 +402,63 @@
                 </div>
             </div>
             <div class="sub-main">
-                <div class="sec1">
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-house"></i></div>
-                        <div> Total <br><span >$400</span></div>
-                    </div>
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-house"></i></div>
-                        <div class="card-icon"> Total <br><span >$400</span></div>
-                        
-                        
-                    </div>
-                    <div class="Total-appoinment">
-                        <div> <i class="fa-solid fa-house"></i></div>
-                        <div> Total <br><span >$400</span></div>
-                    </div>
-                </div>
-                <div class="sec2">
-                    <div class="left"><img src="./photos/profile2.jpg" alt="" ></div>
-                    <div class="right" >
-                        <h1>Welcome to Online Appointment Booking !</h1>
-                        <p>This is an platform where enabled public to have an direct appointment with doctor.</p>
-                        <button class="sec2-right" onclick="BookAppointment()">Learn More</button>
-                    </div>
-                </div>
+                
+                    <div class="containeer" id="bookingApp">
+    <h1>Appointment Booking</h1>
 
-            </div>
-            <div></div>
+    <!-- Step 1: Service Selection -->
+    <div id="step1">
+      <label for="service">Select Service:</label>
+      <select id="service">
+        <option value="">-- Choose Service --</option>
+        <option value="Dental Checkup">Dental Checkup</option>
+        <option value="Eye Examination">Eye Examination</option>
+        <option value="General Consultation">General Consultation</option>
+      </select>
+
+      <button onclick="nextStep(2)">Next</button>
+    </div>
+
+    <!-- Step 2: Provider Selection -->
+    <div id="step2" class="hidden">
+      <label for="provider">Select Provider:</label>
+      <select id="provider">
+        <option value="">-- Choose Provider --</option>
+        <option value="Dr. Smith">Dr. Smith</option>
+        <option value="Dr. Johnson">Dr. Johnson</option>
+        <option value="Dr. Lee">Dr. Lee</option>
+      </select>
+      <button onclick="nextStep(3)">Next</button>
+    </div>
+
+    <!-- Step 3: Date & Time Picker -->
+    <div id="step3" class="hidden">
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" />
+      <label for="time">Select Time:</label>
+      <input type="time" id="time" />
+      <button onclick="nextStep(4)">Next</button>
+    </div>
+
+    <!-- Step 4: Confirmation Page -->
+    <div id="step4" class="hidden">
+      <h3>Confirm Appointment Details</h3>
+      <div class="summary" id="summary"></div>
+      <button onclick="confirmBooking()">Confirm Booking</button>
+      <button onclick="cancelBooking()">Cancel</button>
+    </div>
+
+    <!-- Step 5: Booking Confirmation -->
+    <div id="step5" class="hidden confirmation">
+      <p>🎉 Your appointment has been booked successfully!</p>
+      <p id="confirmDetails"></p>
+      <button onclick="restart()">Book Another Appointment</button>
+    </div>
+  </div>
+
+
+          
+           
           
         </div>
         
@@ -382,32 +470,75 @@
 
     
     <script>
-        const params=new URLSearchParams(window.location.search);
-        const id=parseInt(params.get("id"));
+    // Store booking data in a temporary object
+    let booking = {};
 
-        const users=JSON.parse(localStorage.getItem("users"))||"";
+    function nextStep(step) {
+      // Hide all steps
+      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
 
+      if (step === 2) {
+        const service = document.getElementById("service").value;
+        if (!service) return alert("Please select a service.");
+        booking.service = service;
+      }
 
-        const user=users.find(u=>u.id===id);
+      if (step === 3) {
+        const provider = document.getElementById("provider").value;
+        if (!provider) return alert("Please select a provider.");
+        booking.provider = provider;
+      }
 
-        document.getElementById("acc-name").innerHTML=user.email+ `<i class="fa-solid fa-sort-down" style="margin-left: 5px;">`;
-        document.getElementById("greeting").innerHTML=user.name;
-        function Homescreen(){
-            window.location.href=`user_dashboard.html?id=${id}`;
-        }
-        function BookAppointment(){
-            window.location.href=`user_booking.html?id=${id}`;
-        }
-        function AppointmentHistory(){
-            window.location.href=`user_booking_history.html?id=${id}`;
-        }
-        function updateprofile(){
-            window.location.href=`user_profile.html?id=${id}`;
-        }
-        function Aboutus(){
-             window.location.href=`user_aboutus.html?id=${id}`
-        }
+      if (step === 4) {
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        if (!date || !time) return alert("Please select date and time.");
+        booking.date = date;
+        booking.time = time;
 
-    </script>
+        // Show summary
+        document.getElementById("summary").innerHTML = `
+          <b>Service:</b> ${booking.service}<br>
+          <b>Provider:</b> ${booking.provider}<br>
+          <b>Date:</b> ${booking.date}<br>
+          <b>Time:</b> ${booking.time}
+        `;
+      }
+
+      // Show the next step
+      document.getElementById(`step${step}`).classList.remove("hidden");
+    }
+
+    function confirmBooking() {
+      // Save to Local Storage
+      let bookings = JSON.parse(localStorage.getItem("appointments")) || [];
+      bookings.push(booking);
+      localStorage.setItem("appointments", JSON.stringify(bookings));
+
+      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
+      document.getElementById("step5").classList.remove("hidden");
+      document.getElementById("confirmDetails").innerHTML = `
+        Service: ${booking.service}<br>
+        Provider: ${booking.provider}<br>
+        Date: ${booking.date}<br>
+        Time: ${booking.time}
+      `;
+    }
+
+    function cancelBooking() {
+      alert("Booking cancelled.");
+      restart();
+    }
+
+    function restart() {
+      booking = {};
+      document.getElementById("service").value = "";
+      document.getElementById("provider").value = "";
+      document.getElementById("date").value = "";
+      document.getElementById("time").value = "";
+      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
+      document.getElementById("step1").classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>

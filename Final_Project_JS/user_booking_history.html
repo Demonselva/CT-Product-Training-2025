@@ -251,6 +251,46 @@
 
 
         }
+         /* --- Booking Page --- */
+        .booking-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            margin-top: 30px;
+        }
+        .booking-container h2 {
+            text-align: center;
+            color: #0a74da;
+            margin-bottom: 20px;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form select, form input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #0a74da;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .confirmation, .summary {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
        
     </style>
 </head>
@@ -287,62 +327,124 @@
                 </div>
             </div>
             <div class="sub-main">
-                <div class="sec1">
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> <i class="fa-solid fa-caret-arrow"></i></div>
-                        <div> Total <br><span >$400</span></div>
-                    </div>
-                    <div class="Total-appoinment">
-                        <div class="card-icon"> Total <br><span >$400</span></div>
-                        <div class="card-icon"> <i class="fa-solid fa-caret-arrow"></i></div>
-                        
-                    </div>
-                    <div class="Total-appoinment">
-                        <div> <i class="fa-solid fa-caret-arrow"></i></div>
-                        <div> Total <br><span >$400</span></div>
-                    </div>
-                </div>
-                <div class="sec2">
-                    <img src="" alt="" height="40px" width="60px">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo molestias non sit, be
-                        atae delectus quos ipsum cum odit ratione neque quas incidunt adipisci excepturi
-                         nam voluptatibus amet temporibus iure placeat.</p>
+                 <div class="booking-container">
+                    <h2>Appointment Booking</h2>
+                    <form id="bookingForm">
+                        <label>Choose Service:</label>
+                        <select id="service" required>
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="General Checkup">General Checkup</option>
+                            <option value="Dental Care">Dental Care</option>
+                            <option value="Eye Specialist">Eye Specialist</option>
+                            <option value="Dermatology">Dermatology</option>
+                        </select>
+
+                        <label>Choose Provider:</label>
+                        <select id="provider" required>
+                            <option value="" disabled selected>Select Provider</option>
+                            <option value="Dr. John">Dr. John</option>
+                            <option value="Dr. Priya">Dr. Priya</option>
+                            <option value="Dr. Meena">Dr. Meena</option>
+                        </select>
+
+                        <label>Select Date:</label>
+                        <input type="date" id="date" required>
+
+                        <label>Select Time:</label>
+                        <input type="time" id="time" required>
+
+                        <button onclick="submit()">Proceed to Confirmation</button>
+                    </form>
+
+                    <div class="summary" id="summary" style="display:none;"></div>
+                    <div class="confirmation" id="confirmation" style="display:none;"></div>
+
                 </div>
 
             </div>
-            <div></div>
-          
+
         </div>
-        
-    
-    
-        
+
     </div>
-     <footer style=" bottom: 0; text-align: center; background-color: #ccc; width: 100%; padding: 10px;">@copyright</footer>
 
-    
+
+
+    <footer style="bottom: 0; text-align: center; background-color: #ccc; width: 100%; padding: 10px;">@copyright</footer>
+
     <script>
-        const params=new URLSearchParams(window.location.search);
-        const id=parseInt(params.get("id"));
+        const params = new URLSearchParams(window.location.search);
+        const id = parseInt(params.get("id"));
 
-        const users=JSON.parse(localStorage.getItem("users"))||"";
+        const users = JSON.parse(localStorage.getItem("users")) || "";
+        const user = users.find(u => u.id === id);
 
-        const user=users.find(u=>u.id===id);
+        document.getElementById("acc-name").innerHTML = user.email + `<i class="fa-solid fa-sort-down" style="margin-left: 5px;"></i>`;
+        document.getElementById("greeting").innerHTML = user.name;
 
-        document.getElementById("acc-name").innerHTML=user.name+ `<i class="fa-solid fa-sort-down" style="margin-left: 5px;">`;
-        function Homescreen(){
-            window.location.href=`user_dashboard.html?id=${id}`;
-        }
-        function BookAppointment(){
-            window.location.href=`user_booking.html?id=${id}`;
-        }
-        function AppointmentHistory(){
-            window.location.href=`user_booking_history.html?id=${id}`;
-        }
-        function Aboutus(){
-             window.location.href=`user_aboutus.html?id=${id}`
+        function Homescreen(){ window.location.href=`user_dashboard.html?id=${id}`; }
+        function BookAppointment(){ window.location.href=`user_booking.html?id=${id}`; }
+        function AppointmentHistory(){ window.location.href=`user_booking_history.html?id=${id}`; }
+        function updateprofile(){ window.location.href=`user_profile.html?id=${id}`; }
+        function Aboutus(){ window.location.href=`user_aboutus.html?id=${id}`; }
+
+        // ✅ Booking System
+        const bookingForm = document.getElementById("bookingForm");
+        const summaryDiv = document.getElementById("summary");
+        const confirmationDiv = document.getElementById("confirmation");
+
+        function submit(){
+            event.preventDefault();
+
+            const service = document.getElementById("service").value;
+            const provider = document.getElementById("provider").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+
+            summaryDiv.style.display = "block";
+            summaryDiv.innerHTML = `
+                <h3>Appointment Summary</h3>
+                <p><strong>Service:</strong> ${service}</p>
+                <p><strong>Provider:</strong> ${provider}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Time:</strong> ${time}</p>
+                <button onclick="confirmBooking('${service}','${provider}','${date}','${time}')">Confirm</button>
+                <button onclick="cancelBooking()">Cancel</button>
+            `;
+            
+        };
+
+        function confirmBooking(service, provider, date, time){
+            event.preventDefault()
+            const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+            const newBooking = {
+                id: Date.now(),
+                userId: id,
+                service,
+                provider,
+                date,
+                time,
+                status: "Upcoming"
+            };
+            appointments.push(newBooking);
+            localStorage.setItem("appointments", JSON.stringify(appointments));
+
+            summaryDiv.style.display = "none";
+            confirmationDiv.style.display = "block";
+            confirmationDiv.innerHTML = `
+                <h3>Booking Confirmed ✅</h3>
+                <p>Your appointment has been successfully booked!</p>
+                <p><strong>Service:</strong> ${service}</p>
+                <p><strong>Provider:</strong> ${provider}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Time:</strong> ${time}</p>
+                <button onclick="AppointmentHistory()">Go to My Appointments</button>
+            `;
         }
 
+        function cancelBooking(){
+            summaryDiv.style.display = "none";
+            alert("Booking cancelled.");
+        }
     </script>
 </body>
 </html>
