@@ -282,7 +282,7 @@
         }
         const tabbody=document.getElementById("table-body")
 
-        users.forEach(user => {
+        users.forEach((user,index) => {
             const tr=document.createElement("TR");
             const id=document.createElement("TD");
             const name=document.createElement("TD");
@@ -297,13 +297,7 @@
             
             del_btn.className="del-btn"
 
-            del_btn.addEventListener('click',()=>{
-               users.splice(index,1);
-               localStorage.setItem("users",json.stringify(users));
-               tr.remove();
-            })
-
-
+            
             
 
             id.append(user.id)
@@ -320,7 +314,42 @@
             tr.append(del)
 
             tabbody.appendChild(tr);
-            
+            del_btn.addEventListener("click", () => {
+            const confirmDelete = confirm(`Deactivate user "${user.name}"?`);
+            if (confirmDelete) {
+            users.splice(index, 1);
+            localStorage.setItem("users", JSON.stringify(users));
+            tr.remove();
+            alert("User deactivated successfully.");
+            }
+  });
+            edit_btn.addEventListener("click", () => {
+                const newId = prompt("Enter new ID:", user.id);
+                const newName = prompt("Enter new name:", user.name);
+                const newEmail = prompt("Enter new email:", user.email);
+
+                if (!newId || !newName || !newEmail) {
+                alert("All fields are required!");
+                return;
+                }
+
+                // Update user in array
+                users[index].id = parseInt(newId);
+                users[index].name = newName;
+                users[index].email = newEmail;
+
+                // Save to localStorage
+                localStorage.setItem("users", JSON.stringify(users));
+
+                // Update displayed row
+                id.textContent = newId;
+                name.textContent = newName;
+                email.textContent = newEmail;
+
+                alert("User updated successfully!");
+            });
+
+
 
         });
 

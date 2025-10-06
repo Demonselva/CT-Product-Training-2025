@@ -315,11 +315,12 @@
                    
                     <table>
                         <thead>
-                             <th>ID</th>
+                             <th>Appointment ID</th>
                             <th>Service</th>
                             <th>Provider</th>
                             <th>date</th>
                             <th>Time</th>
+                            <th>Replay</th>
                             <th>Action</th>
                         </thead>
                        
@@ -344,60 +345,80 @@
         const users = JSON.parse(localStorage.getItem("users")) || "";
         const user = users.find(u => u.id === id);
 
-        const appoinments=JSON.parse(localStorage.getItem("appointments"))||"";
+       const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+const user_appts = appointments.filter(app => app.id === id);
 
-        const user_appts=appoinments.filter(app=>app.id===id)
+const tabbody = document.getElementById("tabbody");
+tabbody.innerHTML = ""; 
 
-        const tabbody=document.getElementById("tabbody")
+user_appts.forEach(appointment => {
+  const tr = document.createElement("TR");
+  const appid = document.createElement("TD");
+  const service = document.createElement("TD");
+  const provider = document.createElement("TD");
+  const date = document.createElement("TD");
+  const time = document.createElement("TD");
+  const reply = document.createElement("TD");
+  const del = document.createElement("TD");
 
-        user_appts.forEach(appointment => {
-            const tr=document.createElement("TR");
-            const id=document.createElement("TD");
-            const service=document.createElement("TD");
-            const provider=document.createElement("TD");
-            const date=document.createElement("TD");
-            const time=document.createElement("TD");
-          
-            const del =document.createElement("TD");
+  const del_btn = document.createElement("button");
+  const edit_btn = document.createElement("button");
+  del_btn.textContent = "Cancel";
+  edit_btn.textContent = "Edit";
+  edit_btn.className = "edit-btn";
+  del_btn.className = "del-btn";
 
-            const del_btn=document.createElement("button");
-            const edit_btn=document.createElement("button");
-            del_btn.append(document.createTextNode("cancel"));
-            edit_btn.append(document.createTextNode("Edit"));
-            edit_btn.className="edit-btn"
-            
-            del_btn.className="del-btn"
+  
+  appid.textContent = appointment.appid;
+  service.textContent = appointment.service;
+  provider.textContent = appointment.provider;
+  date.textContent = appointment.date;
+  time.textContent = appointment.time;
+  reply.textContent = appointment.action || "Not accepted";
 
-            del_btn.addEventListener('click',()=>{
-               users.splice(index,1);
-               localStorage.setItem("users",json.stringify(users));
-               tr.remove();
-            })
+  del.append(edit_btn, del_btn);
+  tr.append(appid, service, provider, date, time, reply, del);
+  tabbody.appendChild(tr);
 
+  del_btn.addEventListener("click", () => {
+    const confirmDelete = confirm(
+      `Are you sure you want to cancel appointment ID ${appointment.appid}?`
+    );
+    if (confirmDelete) {
+      
+      const updatedAppointments = appointments.filter(app => app.appid !== appointment.appid);
+      localStorage.setItem("appointments", JSON.stringify(updatedAppointments));
+      tr.remove(); 
+      alert("Appointment cancelled successfully.");
+    }
+  });
 
-            
+ 
+  edit_btn.addEventListener("click", () => {
+    const newDate = prompt("Enter new date (YYYY-MM-DD):", appointment.date);
+    const newTime = prompt("Enter new time (HH:MM):", appointment.time);
 
-            id.append(appointment.id)
-            service.append(appointment.service)
-            provider.append(appointment.provider)
-            date.append(appointment.date)
-            time.append(appointment.time)
-              del.append(edit_btn)
-            del.append(del_btn)
-          
-            
+    if (!newDate || !newTime) {
+      alert("Date and time cannot be empty!");
+      return;
+    }
 
-            tr.appendChild(id);
-            tr.appendChild(service);
-            tr.appendChild(provider);
-            tr.appendChild(date);
-            tr.appendChild(time);
-            tr.append(del)
+   
+    const index = appointments.findIndex(app => app.appid === appointment.appid);
+    if (index !== -1) {
+      appointments[index].date = newDate;
+      appointments[index].time = newTime;
+      localStorage.setItem("appointments", JSON.stringify(appointments));
 
-            tabbody.appendChild(tr);
-            
+     
+      date.textContent = newDate;
+      time.textContent = newTime;
 
-        });
+      alert("Appointment updated successfully.");
+    }
+  });
+});
+
 
 
 

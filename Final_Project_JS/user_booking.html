@@ -351,27 +351,18 @@
                           <label for="service">Select Service:</label>
                           <select id="service">
                             <option value="">-- Choose Service --</option>
-                            <option value="Dental Checkup">Dental Checkup</option>
-                            <option value="Eye Examination">Eye Examination</option>
-                            <option value="General Consultation">General Consultation</option>
                           </select>
-
                           <button onclick="nextStep(2)">Next</button>
                         </div>
 
-                        <!-- Step 2: Provider Selection -->
                         <div id="step2" class="hidden">
                           <label for="provider">Select Provider:</label>
                           <select id="provider">
                             <option value="">-- Choose Provider --</option>
-                            <option value="Dr. Smith">Dr. Smith</option>
-                            <option value="Dr. Johnson">Dr. Johnson</option>
-                            <option value="Dr. Lee">Dr. Lee</option>
                           </select>
                           <button onclick="nextStep(3)">Next</button>
                         </div>
 
-                        <!-- Step 3: Date & Time Picker -->
                         <div id="step3" class="hidden">
                           <label for="date">Select Date:</label>
                           <input type="date" id="date" />
@@ -380,7 +371,6 @@
                           <button onclick="nextStep(4)">Next</button>
                         </div>
 
-                        <!-- Step 4: Confirmation Page -->
                         <div id="step4" class="hidden">
                           <h3>Confirm Appointment Details</h3>
                           <div class="summary" id="summary"></div>
@@ -388,7 +378,6 @@
                           <button onclick="cancelBooking()">Cancel</button>
                         </div>
 
-                        <!-- Step 5: Booking Confirmation -->
                         <div id="step5" class="hidden confirmation">
                           <p>🎉 Your appointment has been booked successfully!</p>
                           <p id="confirmDetails"></p>
@@ -407,84 +396,115 @@
 
     
     <script>
-        const params=new URLSearchParams(window.location.search);
-        const id=parseInt(params.get("id"));
+       const params = new URLSearchParams(window.location.search);
+const id = parseInt(params.get("id"));
 
-        const users=JSON.parse(localStorage.getItem("users"))||"";
+const users = JSON.parse(localStorage.getItem("users")) || [];
+const user = users.find(u => u.id === id);
 
+let booking = {};
+booking.id = id;
 
-        const user=users.find(u=>u.id===id);
-        
-    let booking = {};
-    booking.id=id;
+window.onload = function() {
+  
+  const services = JSON.parse(localStorage.getItem("services")) || [];
+  const providers = JSON.parse(localStorage.getItem("providers")) || [];
 
-    function nextStep(step) {
-     
-      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
+  const serviceSelect = document.getElementById("service");
+  const providerSelect = document.getElementById("provider");
 
-      if (step === 2) {
-        const service = document.getElementById("service").value;
-        if (!service) return alert("Please select a service.")  ;
-        booking.service = service;
-      }
+  
+  services.forEach(service => {
+    const option = document.createElement("option");
+    option.value = service;
+    option.textContent = service;
+    serviceSelect.appendChild(option);
+  });
 
-      if (step === 3) {
-        const provider = document.getElementById("provider").value;
-        if (!provider) return alert("Please select a provider.");
-        booking.provider = provider;
-      }
+  providers.forEach(provider => {
+    const option = document.createElement("option");
+    option.value = provider;
+    option.textContent = provider;
+    providerSelect.appendChild(option);
+  });
+};
+function nextStep(step) {
+  document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
 
-      if (step === 4) {
-        const date = document.getElementById("date").value;
-        const time = document.getElementById("time").value;
-        if (!date || !time) return alert("Please select date and time.");
-        booking.date = date;
-        booking.time = time;
+  if (step === 2) {
+    const service = document.getElementById("service").value;
+    if (!service) return alert("Please select a service.");
+    booking.service = service;
+  }
 
-        
-        document.getElementById("summary").innerHTML = `
-          <b>ID :</b> ${booking.id}<br>
-          <b>Service:</b> ${booking.service}<br>
-          <b>Provider:</b> ${booking.provider}<br>
-          <b>Date:</b> ${booking.date}<br>
-          <b>Time:</b> ${booking.time}
-        `;
-      }
+  if (step === 3) {
+    const provider = document.getElementById("provider").value;
+    if (!provider) return alert("Please select a provider.");
+    booking.provider = provider;
+  }
 
-      
-      document.getElementById(`step${step}`).classList.remove("hidden");
-    }
+  if (step === 4) {
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    if (!date || !time) return alert("Please select date and time.");
+    booking.date = date;
+    booking.time = time;
 
-    function confirmBooking() {
-      
-      let bookings = JSON.parse(localStorage.getItem("appointments")) || [];
-      bookings.push(booking);
-      localStorage.setItem("appointments", JSON.stringify(bookings));
+    document.getElementById("summary").innerHTML = `
+      <b>ID :</b> ${booking.id}<br>
+      <b>Service:</b> ${booking.service}<br>
+      <b>Provider:</b> ${booking.provider}<br>
+      <b>Date:</b> ${booking.date}<br>
+      <b>Time:</b> ${booking.time}
+    `;
+  }
 
-      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
-      document.getElementById("step5").classList.remove("hidden");
-      document.getElementById("confirmDetails").innerHTML = `
-        Service: ${booking.service}<br>
-        Provider: ${booking.provider}<br>
-        Date: ${booking.date}<br>
-        Time: ${booking.time}
-      `;
-    }
+  document.getElementById(`step${step}`).classList.remove("hidden");
+}
 
-    function cancelBooking() {
-      alert("Booking cancelled.");
-      restart();
-    }
+function confirmBooking() {
+  let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+ let newAppId = 1;
+  if (appointments.length > 0) {
+   
+    const lastApp = appointments[appointments.length - 1];
+    const lastAppId = parseInt(lastApp.appid) || 0; 
+    newAppId = lastAppId + 1;
+  }
 
-    function restart() {
-      booking = {};
-      document.getElementById("service").value = "";
-      document.getElementById("provider").value = "";
-      document.getElementById("date").value = "";
-      document.getElementById("time").value = "";
-      document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
-      document.getElementById("step1").classList.remove("hidden");
-    }
+  booking.appid = newAppId;
+  booking.action="Not Accepted";
+  
+  appointments.push(booking);
+  localStorage.setItem("appointments", JSON.stringify(appointments));
+
+  
+  document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
+  document.getElementById("step5").classList.remove("hidden");
+  document.getElementById("confirmDetails").innerHTML = `
+    <b>Appointment ID:</b> ${booking.appid}<br>
+    <b>Service:</b> ${booking.service}<br>
+    <b>Provider:</b> ${booking.provider}<br>
+    <b>Date:</b> ${booking.date}<br>
+    <b>Time:</b> ${booking.time}
+  `;
+}
+
+function cancelBooking() {
+  alert("Booking cancelled.");
+  restart();
+}
+
+function restart() {
+  booking = { id: id }; 
+  document.getElementById("service").value = "";
+  document.getElementById("provider").value = "";
+  document.getElementById("date").value = "";
+  document.getElementById("time").value = "";
+  document.querySelectorAll("#bookingApp > div").forEach(div => div.classList.add("hidden"));
+  document.getElementById("step1").classList.remove("hidden");
+}
+
 
      
 

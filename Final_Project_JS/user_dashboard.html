@@ -380,13 +380,13 @@
                     </div>
                     <div class="Total-appoinment">
                         <div class="card-icon"> <i class="fa-solid fa-clock-rotate-left"></i></div>
-                        <div class="sec1-right"> Pending Appointments <br><span >$400</span></div>
+                        <div class="sec1-right"> Pending Appointments <br><span id="Pending-appointment" >$400</span></div>
                         
                         
                     </div>
                     <div class="Total-appoinment">
                         <div class="card-icon"> <i class="fa-solid fa-check"></i></div>
-                        <div class="sec1-right" > Accepted Appointments <br><span >$400</span></div>
+                        <div class="sec1-right" > Accepted Appointments <br><span id="Accepted-appointment" >$400</span></div>
                     </div>
                 </div>
                 <div class="sec2">
@@ -422,12 +422,23 @@
         const appoinments=JSON.parse(localStorage.getItem("appointments"))||"";
 
         const user_appts=appoinments.filter(app=>app.id===id)
+         const len=parseInt(user_appts.length);
+        // pending
+
+        const pending_app=appoinments.filter(app=>app.id===id && app.action==="Not Accepted")
+         const pen_len=parseInt(pending_app.length);
+
+         const acc_app=appoinments.filter(app=>app.id===id && app.action==="Accepted")
+         const acc_len=parseInt(pending_app.length);
 
     
 
-        const len=parseInt(user_appts.length);
+
+       
 
         document.getElementById("Total-appointment").innerHTML=len
+        document.getElementById("Pending-appointment").innerHTML=pen_len
+        document.getElementById("Accepted-appointment").innerHTML=acc_len
 
         document.getElementById("acc-name").innerHTML=user.email+ `<i class="fa-solid fa-sort-down" style="margin-left: 5px;">`;
         document.getElementById("greeting").innerHTML=user.name;

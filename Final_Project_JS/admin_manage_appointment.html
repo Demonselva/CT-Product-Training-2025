@@ -283,7 +283,7 @@
         }
         const tabbody=document.getElementById("table-body")
 
-        appointments.forEach(appointment => {
+        appointments.forEach((appointment,index) => {
             const tr=document.createElement("TR");
             const id=document.createElement("TD");
             const service=document.createElement("TD");
@@ -301,11 +301,7 @@
             
             del_btn.className="del-btn"
 
-            del_btn.addEventListener('click',()=>{
-               users.splice(index,1);
-               localStorage.setItem("users",json.stringify(users));
-               tr.remove();
-            })
+            
 
 
             
@@ -318,7 +314,15 @@
               del.append(edit_btn)
             del.append(del_btn)
           
-            
+            del_btn.addEventListener("click",()=>{
+                 const confirmDelete = confirm(`Delete appointment "${appointment.appid}"?`);
+                 if (confirmDelete) {
+                    appointments.splice(index, 1);
+                    localStorage.setItem("appointments", JSON.stringify(appointments));
+                    tr.remove();
+                    alert("User deactivated successfully.");
+                     }
+            })
 
             tr.appendChild(id);
             tr.appendChild(service);
@@ -328,6 +332,29 @@
             tr.append(del)
 
             tabbody.appendChild(tr);
+            edit_btn.addEventListener("click", () => {
+    const newDate = prompt("Enter new date (YYYY-MM-DD):", appointment.date);
+    const newTime = prompt("Enter new time (HH:MM):", appointment.time);
+
+    if (!newDate || !newTime) {
+      alert("Date and time cannot be empty!");
+      return;
+    }
+
+   
+    const index = appointments.findIndex(app => app.appid === appointment.appid);
+    if (index !== -1) {
+      appointments[index].date = newDate;
+      appointments[index].time = newTime;
+      localStorage.setItem("appointments", JSON.stringify(appointments));
+
+     
+      date.textContent = newDate;
+      time.textContent = newTime;
+
+      alert("Appointment updated successfully.");
+    }
+  });
             
 
         });
