@@ -70,7 +70,14 @@
         .main {
             
             min-height: 100vh;
-        }
+            transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
         .main .header{
             align-items: center;
             justify-content: center;
@@ -215,6 +222,7 @@
                 margin-right: 10px;
                
             }
+            
 
             @keyframes gradientAnimation {
             0% {
@@ -271,6 +279,7 @@
             background:linear-gradient(45deg,rgb(116, 52, 177), #2afff4d7,rgb(5, 139, 180));
             background-size: 300%;
             animation: gradientAnimation 6s infinite alternate ;
+    
 
 
         }
@@ -375,6 +384,18 @@ user_appts.forEach(appointment => {
   date.textContent = appointment.date;
   time.textContent = appointment.time;
   reply.textContent = appointment.action || "Not accepted";
+  reply.className="actionn";
+
+  if (appointment.action==="Not Accepted"){
+   reply.style.color="red";
+   reply.style.backgroundColor=" #ffcccc";
+   
+  }
+  else{
+      reply.style.color="green"
+       reply.style.backgroundColor=" #ffcccc";
+   
+  }
 
   del.append(edit_btn, del_btn);
   tr.append(appid, service, provider, date, time, reply, del);

@@ -71,7 +71,15 @@
         .main {
             
             min-height: 100vh;
-        }
+             transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
+
         .main .header{
             align-items: center;
             justify-content: center;
@@ -428,8 +436,8 @@
         const pending_app=appoinments.filter(app=>app.id===id && app.action==="Not Accepted")
          const pen_len=parseInt(pending_app.length);
 
-         const acc_app=appoinments.filter(app=>app.id===id && app.action==="Accepted")
-         const acc_len=parseInt(pending_app.length);
+         const acc_app=appoinments.filter(app=>app.id===id && app.action==="Accepted")||0;
+         const acc_len=parseInt(acc_app.length);
 
     
 

@@ -68,7 +68,14 @@
         .main {
             
             min-height: 100vh;
-        }
+          transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
         .main .header{
             align-items: center;
             justify-content: center;
@@ -265,7 +272,7 @@
                     </div>
                     <div class="Total-appoinment">
                         <div class="card-icon"> <i class="fa-solid fa-stethoscope"></i></div>
-                        <div class="sec1-right"> Total Services <br><span >4</span></div>
+                        <div class="sec1-right"> Total Services <br><span id="Total-service" >4</span></div>
                     </div>
                 </div>
                  <div class="sec2">
@@ -298,6 +305,9 @@
 
 
         const length=users.length;
+
+        const service=JSON.parse(localStorage.getItem("services"))||""
+        document.getElementById("Total-service").innerHTML=service.length;
         document.getElementById("Total-user").innerHTML=length;
         document.getElementById("Total-appoinment").innerHTML=lenapp;
         function admindash(){

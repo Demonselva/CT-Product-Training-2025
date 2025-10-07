@@ -71,7 +71,14 @@
         .main {
             
             min-height: 100vh;
-        }
+              transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
         .main .header{
             align-items: center;
             justify-content: center;
@@ -221,6 +228,10 @@
             .main .sub-main .sec1 {
                 grid-template-columns: 1fr;
             }
+            .main .sub-main .sec1 input{
+                width: 70%;
+            }
+
            
             
         }
@@ -316,9 +327,11 @@
                         <h1>Contact details</h1>
                         <input type="text"  value="jindo123" id="email" disabled>
                         <input type="text" id="phonenumber" value="111" readonly> <br>
+                        <input type="password" id="password" value="111" readonly> <br>
                     </div>
                     <div class="change-pass">
                          <button onclick="changepass()"> Change password</button>
+                         <button onclick="changename()"> Change Name</button>
                     </div>
                      
                        
@@ -345,19 +358,39 @@
         document.getElementById("greeting").innerHTML=user.name;
 
         document.getElementById("email").value=user.email;
-        document.getElementById("phonenumber").value=user.password;
+        document.getElementById("phonenumber").value=user.phone;
         document.getElementById("name").value=user.name;
+        document.getElementById("password").value=user.password;
 
         function changepass(){
             const currentpass=prompt("enter the curren password");
-            const newpass=prompt("enter the new password");
-            const okconfirm=confirm("change password");
-            if (okconfirm){
-                user.password=newpass;
-                alert(`password changed by ${user.name}`)
-                event.preventDefault()
+            if (currentpass === user.password){
+                const newpass=prompt("enter the new password");
+                const okconfirm=confirm("change password");
+                if (okconfirm){
+                    user.password=newpass;
+                    alert(`password changed by ${user.name}`)
+                    event.preventDefault()
+                }
+            }else{
+                alert("enter the current password correctly ;")
             }
         }
+        function changename(){
+            const newname=prompt("enter the new name",user.name);
+            const okconfirm=confirm("change password");
+           
+                if (okconfirm){
+                     if (!newname){
+                            alert("enter the new name");
+                            return; 
+                        }
+                    user.password=newpass;
+                    alert("name changed successfully");
+                   event.preventDefault()
+                }
+            }
+        
         function Homescreen(){
             window.location.href=`user_dashboard.html?id=${id}`;
         }
