@@ -246,6 +246,7 @@
                 </div>
             </div>
             <div class="sub-main">
+               <div style="float: right; margin: 20px;" > <button style="color: white; padding:10px; background-color:rgb(31, 98, 255); border: none; border-radius: 10px;" onclick="addusers()">Add Users +</button></div>
                <table style="text-align: left;">
                 <thead>
                     <th>ID</th>
@@ -353,6 +354,73 @@
 
 
         });
+         function addusers() {
+                let name = prompt("enter the name");
+                 if (!name) {
+                    alert("Please fill all fields");
+                    return;
+                }
+                let email = prompt("enter the email");
+                 if ( !email ) {
+                    alert("Please fill all fields");
+                    return;
+                }
+                regrex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!regrex.test(email)){
+                    alert("email format is wrong");
+                    return;
+                }
+                let phno =prompt("enter the phone number")
+                 if (!phno) {
+                    alert("Please fill all fields");
+                    return;
+                }
+                 if (phno.length<10 ){
+                alert("phone number should be 10 number")
+                return;
+                }
+                let pass = prompt("enter the password")
+                 if (!pass) {
+                    alert("Please fill all fields");
+                    return;
+                }
+                let conf = prompt("enter the password again");
+                if (pass.length<8){
+                    alert("password should atleast 8 characters");
+                    return; 
+                }
+               
+                
+                if (pass !== conf) {
+                    alert("Passwords do not match!");
+                    return;
+                }
+                let id=0;
+                let newid=0;
+                let confirms=confirm("do you want to add users ?");
+
+                
+               
+
+                
+                
+                let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+                if (users.find(u => u.email === email)) {
+                    alert("User already exists!");
+                    return;
+                }
+                if (users.length>0){
+                newid=users[users.length-1].id+1;
+                }
+                users.push({id:newid, name: name, email: email,phone:phno, password: pass });
+            
+                localStorage.setItem("users", JSON.stringify(users));
+
+                alert("Added Successfully!");
+                window.location.href="admin_manage_user.html"
+}
 
         
 
