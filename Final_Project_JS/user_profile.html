@@ -363,31 +363,47 @@
         document.getElementById("password").value=user.password;
 
         function changepass(){
+             event.preventDefault()
             const currentpass=prompt("enter the curren password");
             if (currentpass === user.password){
                 const newpass=prompt("enter the new password");
-                const okconfirm=confirm("change password");
+                if (!newpass){
+                    alert("password cannot be empty");
+                    return;
+                }
+                const okconfirm=confirm("do you want to change password");
                 if (okconfirm){
                     user.password=newpass;
+                    let index=users.findIndex(u=>u.id===id)
+                    users[index]=user;
+                    localStorage.setItem("users",JSON.stringify(users));
+                    
                     alert(`password changed by ${user.name}`)
-                    event.preventDefault()
+                   
                 }
             }else{
-                alert("enter the current password correctly ;")
+                alert("Incorrect Current Password")
             }
         }
         function changename(){
+            event.preventDefault()
             const newname=prompt("enter the new name",user.name);
-            const okconfirm=confirm("change name");
-           
-                if (okconfirm){
-                     if (!newname){
+              if (!newname){
                             alert("enter the new name");
                             return; 
                         }
-                    user.password=newpass;
+           
+            const okconfirm=confirm("do you want to change name");
+           
+                if (okconfirm){   
+                    user.name=newname;
+                    let index=users.findIndex(u=>u.id===id);
+                    users[index]=user;
+                    localStorage.setItem("users",JSON.stringify(users));
                     alert("name changed successfully");
-                   event.preventDefault()
+                     document.getElementById("greeting").innerHTML=user.name;
+                       document.getElementById("name").value=user.name;
+                   
                 }
             }
         
