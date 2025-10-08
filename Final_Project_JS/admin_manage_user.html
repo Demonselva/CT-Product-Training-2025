@@ -339,16 +339,10 @@
                 alert("All fields are required!");
                 return;
                 }
-
-                // Update user in array
                 users[index].id = parseInt(newId);
                 users[index].name = newName;
                 users[index].email = newEmail;
-
-                // Save to localStorage
                 localStorage.setItem("users", JSON.stringify(users));
-
-                // Update displayed row
                 id.textContent = newId;
                 name.textContent = newName;
                 email.textContent = newEmail;

@@ -379,10 +379,12 @@
                     localStorage.setItem("users",JSON.stringify(users));
                     
                     alert(`password changed by ${user.name}`)
+
                    
                 }
             }else{
                 alert("Incorrect Current Password")
+                return;
             }
         }
         function changename(){
