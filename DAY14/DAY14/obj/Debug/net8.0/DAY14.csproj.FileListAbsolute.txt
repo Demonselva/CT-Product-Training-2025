@@ -1,0 +1,15 @@
+D:\CT-Product-Training-2025\DAY14\DAY14\bin\Debug\net8.0\DAY14.exe
+D:\CT-Product-Training-2025\DAY14\DAY14\bin\Debug\net8.0\DAY14.deps.json
+D:\CT-Product-Training-2025\DAY14\DAY14\bin\Debug\net8.0\DAY14.runtimeconfig.json
+D:\CT-Product-Training-2025\DAY14\DAY14\bin\Debug\net8.0\DAY14.dll
+D:\CT-Product-Training-2025\DAY14\DAY14\bin\Debug\net8.0\DAY14.pdb
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.GeneratedMSBuildEditorConfig.editorconfig
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.AssemblyInfoInputs.cache
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.AssemblyInfo.cs
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.csproj.CoreCompileInputs.cache
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.sourcelink.json
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.dll
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\refint\DAY14.dll
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.pdb
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\DAY14.genruntimeconfig.cache
+D:\CT-Product-Training-2025\DAY14\DAY14\obj\Debug\net8.0\ref\DAY14.dll
