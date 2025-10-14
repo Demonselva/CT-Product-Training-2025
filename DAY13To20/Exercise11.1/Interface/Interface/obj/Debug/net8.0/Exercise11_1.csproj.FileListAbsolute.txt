@@ -1,0 +1,15 @@
+D:\CT-Product-Training-2025\Interface\Interface\bin\Debug\net8.0\Exercise11_1.exe
+D:\CT-Product-Training-2025\Interface\Interface\bin\Debug\net8.0\Exercise11_1.deps.json
+D:\CT-Product-Training-2025\Interface\Interface\bin\Debug\net8.0\Exercise11_1.runtimeconfig.json
+D:\CT-Product-Training-2025\Interface\Interface\bin\Debug\net8.0\Exercise11_1.dll
+D:\CT-Product-Training-2025\Interface\Interface\bin\Debug\net8.0\Exercise11_1.pdb
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.AssemblyInfoInputs.cache
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.AssemblyInfo.cs
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.csproj.CoreCompileInputs.cache
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.sourcelink.json
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.dll
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\refint\Exercise11_1.dll
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.pdb
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\Exercise11_1.genruntimeconfig.cache
+D:\CT-Product-Training-2025\Interface\Interface\obj\Debug\net8.0\ref\Exercise11_1.dll

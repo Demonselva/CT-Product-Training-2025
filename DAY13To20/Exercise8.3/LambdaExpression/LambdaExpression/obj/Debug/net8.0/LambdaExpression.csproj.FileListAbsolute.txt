@@ -1,0 +1,15 @@
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\bin\Debug\net8.0\LambdaExpression.exe
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\bin\Debug\net8.0\LambdaExpression.deps.json
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\bin\Debug\net8.0\LambdaExpression.runtimeconfig.json
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\bin\Debug\net8.0\LambdaExpression.dll
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\bin\Debug\net8.0\LambdaExpression.pdb
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.GeneratedMSBuildEditorConfig.editorconfig
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.AssemblyInfoInputs.cache
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.AssemblyInfo.cs
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.csproj.CoreCompileInputs.cache
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.sourcelink.json
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.dll
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\refint\LambdaExpression.dll
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.pdb
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\LambdaExpression.genruntimeconfig.cache
+D:\CT-Product-Training-2025\LambdaExpression\LambdaExpression\obj\Debug\net8.0\ref\LambdaExpression.dll

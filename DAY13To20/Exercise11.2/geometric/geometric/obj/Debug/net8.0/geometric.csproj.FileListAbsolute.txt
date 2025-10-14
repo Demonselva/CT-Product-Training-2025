@@ -1,0 +1,15 @@
+D:\CT-Product-Training-2025\geometric\geometric\bin\Debug\net8.0\geometric.exe
+D:\CT-Product-Training-2025\geometric\geometric\bin\Debug\net8.0\geometric.deps.json
+D:\CT-Product-Training-2025\geometric\geometric\bin\Debug\net8.0\geometric.runtimeconfig.json
+D:\CT-Product-Training-2025\geometric\geometric\bin\Debug\net8.0\geometric.dll
+D:\CT-Product-Training-2025\geometric\geometric\bin\Debug\net8.0\geometric.pdb
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.GeneratedMSBuildEditorConfig.editorconfig
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.AssemblyInfoInputs.cache
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.AssemblyInfo.cs
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.csproj.CoreCompileInputs.cache
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.sourcelink.json
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.dll
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\refint\geometric.dll
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.pdb
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\geometric.genruntimeconfig.cache
+D:\CT-Product-Training-2025\geometric\geometric\obj\Debug\net8.0\ref\geometric.dll

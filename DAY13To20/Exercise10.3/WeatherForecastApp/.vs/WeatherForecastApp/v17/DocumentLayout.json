@@ -1,0 +1,72 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|d:\\ct-product-training-2025\\weatherforecastapp\\weatherforecastapp\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|solutionrelative:weatherforecastapp\\weatherreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|d:\\ct-product-training-2025\\weatherforecastapp\\weatherforecastapp\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|solutionrelative:weatherforecastapp\\weatherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|d:\\ct-product-training-2025\\weatherforecastapp\\weatherforecastapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31929E3E-A87A-4A55-81A4-BAE47127078B}|WeatherForecastApp\\WeatherForecastApp.csproj|solutionrelative:weatherforecastapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\Program.cs",
+              "RelativeDocumentMoniker": "WeatherForecastApp\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\Program.cs",
+              "RelativeToolTip": "WeatherForecastApp\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:20:07.108Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherReport.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\WeatherReport.cs",
+              "RelativeDocumentMoniker": "WeatherForecastApp\\WeatherReport.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\WeatherReport.cs",
+              "RelativeToolTip": "WeatherForecastApp\\WeatherReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T10:52:02.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Weatherservice.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\Weatherservice.cs",
+              "RelativeDocumentMoniker": "WeatherForecastApp\\Weatherservice.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\WeatherForecastApp\\WeatherForecastApp\\Weatherservice.cs",
+              "RelativeToolTip": "WeatherForecastApp\\Weatherservice.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowB4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T07:28:33.832Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
