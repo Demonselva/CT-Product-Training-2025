@@ -1,0 +1,63 @@
+.ucontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+
+.form-container{
+    padding: 10px 15px;
+    border: 1px solid rgb(58, 131, 241);
+    border-radius: 10px;
+    background-color: rgb(246, 246, 246);
+}
+.result-container{
+    padding: 10px 15px;
+    border: 1px solid rgb(58, 131, 241);
+    border-radius: 10px;
+    margin-top: 15px;
+      background-color: rgb(247, 247, 247);
+}
+table{
+    border: 1px solid black;
+    border-collapse:collapse ;
+}
+td,th{
+    padding: 10px;
+
+}
+.edit-btn{
+    background-color: rgb(44, 44, 150);
+    padding: 1px 5px;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.del-btn{
+    background-color: rgb(197, 43, 16);
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+input{
+    width: 60%;
+    margin:10px;
+    padding: 10px;
+}
+select{
+     margin:10px;
+    padding: 10px;
+}
+form button{
+    width: 100%;
+    color: white;
+    background-color: rgb(29, 63, 255);
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+}
