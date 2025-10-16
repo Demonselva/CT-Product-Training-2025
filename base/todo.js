@@ -15,14 +15,25 @@ class users{
         let name=document.getElementById("Uname").value;
         let dob=document.getElementById("Dob").value;
         let gender=document.getElementById("Gen").value;
+        if(!name ||!dob ||!gender){
+            alert("enter all field");
+            return;
+            
 
-      
-        let user=new users(name,dob,gender);
+        }
+        else{
+            let user=new users(name,dob,gender);
         userdetails.push(user);
         displaytable();
         document.getElementById("Uname").value='';
         document.getElementById("Dob").value='';
         document.getElementById("Gen").value='';
+            
+        }
+
+
+      
+        
         
         
 
@@ -65,8 +76,21 @@ class users{
     }
    function edit(name){
      let user=userdetails.find(u=>u.uname===name);
-     let a=prompt("enter the anme");
-     user.uname=a;
+     let a=prompt("enter the anme",user.uname);
+     let b=prompt("enter dob in yyyy-MM-DD",user.dob);
+     let c=prompt("enter gender in \"Male\"\"or\" \"Female\"",user.gender);
+     if(!a ||!b ||!c){
+        alert("enter all field")
+        return;
+        
+     }
+     else{
+        user.uname=a;
+     user.dob=b;
+     user.gender=c;
+        
+     }
+    
      displaytable()
 
     
