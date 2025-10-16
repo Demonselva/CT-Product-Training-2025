@@ -1,6 +1,10 @@
 .ucontainer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
+   
+}
+body{
+     background-color: #CCC;
 }
 
 
@@ -8,25 +12,31 @@
     padding: 10px 15px;
     border: 1px solid rgb(58, 131, 241);
     border-radius: 10px;
-    background-color: rgb(246, 246, 246);
+    background-color: rgb(255, 255, 255);
 }
 .result-container{
     padding: 10px 15px;
     border: 1px solid rgb(58, 131, 241);
     border-radius: 10px;
     margin-top: 15px;
-      background-color: rgb(247, 247, 247);
+      background-color: rgb(255, 255, 255);
 }
-table{
-    border: 1px solid black;
+.result-container table{
+  
     border-collapse:collapse ;
 }
-td,th{
+.result-container td,th{
     padding: 10px;
 
 }
-.edit-btn{
+.result-container th{
+    background-color: #CCC;
+
+}
+
+.result-container .edit-btn{
     background-color: rgb(44, 44, 150);
+    color: white;
     padding: 1px 5px;
     width: 100%;
     height: 30px;
@@ -34,8 +44,9 @@ td,th{
     border-radius: 5px;
     border: none;
 }
-.del-btn{
+.result-container .del-btn{
     background-color: rgb(197, 43, 16);
+    color: white;
     border: none;
     padding: 5px;
     margin: 10px;
@@ -48,7 +59,7 @@ label{
 }
 
 input{
-    width: 60%;
+    width: 100%;
     margin:10px;
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -58,6 +69,7 @@ input{
 select{
      margin:10px;
     padding: 10px;
+    width: 100%;
      border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
@@ -70,4 +82,7 @@ form button{
     border: none;
     border-radius: 7px;
     margin-top: 20px;
+}
+.form-container table{
+    width: 90%;
 }
