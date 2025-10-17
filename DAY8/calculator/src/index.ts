@@ -31,12 +31,12 @@ function cleardisplay():void{
     display.value='';
     expression='';
 }
-buttons.forEach((button)=>
+buttons.forEach((button) =>
     button.addEventListener('click',()=>{
         const value : string=button.textContent || '';
         if (value==="C"){
             cleardisplay();
-        }else if(value==="="){
+        }else if(value === "="){
             calculate();
         }else{
             appendvalue(value);

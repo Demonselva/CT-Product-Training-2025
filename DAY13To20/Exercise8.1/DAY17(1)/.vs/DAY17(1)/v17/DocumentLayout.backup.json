@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY17(1)\\",
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DF6E4A2-B66C-45A4-8ED0-2596D85EB55E}|DAY17(1)\\DAY17_1.csproj|d:\\ct-product-training-2025\\day17(1)\\day17(1)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DF6E4A2-B66C-45A4-8ED0-2596D85EB55E}|DAY17(1)\\DAY17_1.csproj|solutionrelative:day17(1)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAY17(1)\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Math.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DAY17(1)\\Math.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Math.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Math.cs",
+              "RelativeDocumentMoniker": "DAY17(1)\\Math.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Math.cs",
+              "RelativeToolTip": "DAY17(1)\\Math.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T09:31:28.918Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Program.cs",
               "RelativeDocumentMoniker": "DAY17(1)\\Program.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\Program.cs",
               "RelativeToolTip": "DAY17(1)\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-11T09:48:07.079Z",
               "EditorCaption": ""

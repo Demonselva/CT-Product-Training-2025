@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|d:\\ct-product-training-2025\\day13to20\\exercise11_3\\exercise11_3\\objserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|solutionrelative:exercise11_3\\objserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\Objserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercise11_3\\Objserializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|d:\\ct-product-training-2025\\day13to20\\exercise11_3\\exercise11_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|solutionrelative:exercise11_3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\obje_cts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercise11_3\\obje_cts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|d:\\ct-product-training-2025\\day13to20\\exercise11_3\\exercise11_3\\obje_cts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6FB75C6B-A7E8-4D98-A8CA-58A618D16964}|Exercise11_3\\Exercise11_3.csproj|solutionrelative:exercise11_3\\obje_cts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercise11_3\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "obje_cts.cs",
               "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\obje_cts.cs",
               "RelativeDocumentMoniker": "Exercise11_3\\obje_cts.cs",
@@ -34,8 +34,7 @@
               "RelativeToolTip": "Exercise11_3\\obje_cts.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAIwBMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:25:39.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T10:25:39.261Z"
             },
             {
               "$type": "Document",
@@ -45,14 +44,14 @@
               "RelativeDocumentMoniker": "Exercise11_3\\Objserializer.cs",
               "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\Objserializer.cs",
               "RelativeToolTip": "Exercise11_3\\Objserializer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBQAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T10:09:28.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise11_3\\Exercise11_3\\Program.cs",
               "RelativeDocumentMoniker": "Exercise11_3\\Program.cs",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Exercise11_3\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T10:07:20.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-14T10:07:20.57Z"
             }
           ]
         }

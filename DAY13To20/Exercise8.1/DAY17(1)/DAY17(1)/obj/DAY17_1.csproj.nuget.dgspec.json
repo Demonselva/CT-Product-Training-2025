@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj": {}
+    "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj": {}
   },
   "projects": {
-    "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj": {
+    "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj",
+        "projectUniqueName": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj",
         "projectName": "DAY17_1",
-        "projectPath": "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj",
+        "projectPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\DAY17_1.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\CT-Product-Training-2025\\DAY17(1)\\DAY17(1)\\obj\\",
+        "outputPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.1\\DAY17(1)\\DAY17(1)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

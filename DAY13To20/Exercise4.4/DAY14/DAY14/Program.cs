@@ -8,6 +8,7 @@ int a = Convert.ToInt32(Console.ReadLine());
 
 int i = 0;
 
+
 while (i < a)
 {
     Console.Write($"{i+1}) guess the number 1 to 100 : ");

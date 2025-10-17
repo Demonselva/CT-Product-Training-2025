@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CT-Product-Training-2025\\DAY16\\DAY16\\DAY16.csproj",
+      "projectUniqueName": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\DAY16.csproj",
       "projectName": "DAY16",
-      "projectPath": "D:\\CT-Product-Training-2025\\DAY16\\DAY16\\DAY16.csproj",
+      "projectPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\DAY16.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\CT-Product-Training-2025\\DAY16\\DAY16\\obj\\",
+      "outputPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

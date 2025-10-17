@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\EventHandling\\",
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.2\\EventHandling\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4024C67A-3D30-406A-9475-3E94A2E9DA7C}|EventHandling\\EventHandling.csproj|d:\\ct-product-training-2025\\eventhandling\\eventhandling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4024C67A-3D30-406A-9475-3E94A2E9DA7C}|EventHandling\\EventHandling.csproj|d:\\ct-product-training-2025\\day13to20\\exercise8.2\\eventhandling\\eventhandling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4024C67A-3D30-406A-9475-3E94A2E9DA7C}|EventHandling\\EventHandling.csproj|solutionrelative:eventhandling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\EventHandling\\EventHandling\\Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.2\\EventHandling\\EventHandling\\Program.cs",
               "RelativeDocumentMoniker": "EventHandling\\Program.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\EventHandling\\EventHandling\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise8.2\\EventHandling\\EventHandling\\Program.cs",
               "RelativeToolTip": "EventHandling\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T04:33:30.95Z",
               "EditorCaption": ""

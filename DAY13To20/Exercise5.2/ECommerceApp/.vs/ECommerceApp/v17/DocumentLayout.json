@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\ECommerceApp\\",
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ECommerceApp\\ShoppingCart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ECommerceApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ECommerceApp\\ShoppingCart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ECommerceApp\\Product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ShoppingCart.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs",
               "RelativeDocumentMoniker": "ECommerceApp\\ShoppingCart.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\ShoppingCart.cs",
               "RelativeToolTip": "ECommerceApp\\ShoppingCart.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T10:58:43.796Z",
               "IsPinned": true,
@@ -42,24 +42,23 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Product.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Product.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Product.cs",
               "RelativeDocumentMoniker": "ECommerceApp\\Product.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Product.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Product.cs",
               "RelativeToolTip": "ECommerceApp\\Product.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T10:52:24.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-09T10:52:24.596Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Program.cs",
               "RelativeDocumentMoniker": "ECommerceApp\\Program.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\ECommerceApp\\ECommerceApp\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise5.2\\ECommerceApp\\ECommerceApp\\Program.cs",
               "RelativeToolTip": "ECommerceApp\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAE0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-09T10:44:31.56Z",
               "EditorCaption": ""
