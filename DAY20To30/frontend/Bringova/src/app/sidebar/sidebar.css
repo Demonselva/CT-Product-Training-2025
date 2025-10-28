@@ -1,0 +1,49 @@
+
+#nav-brand{
+            color: rgb(255, 36, 73); 
+            display: flex;
+            font-family: cursive;
+            font-size: 25px;
+            padding-top:30px ;
+            padding-left: 30px;
+            
+
+        }
+
+.sidebar{
+    width: 100%;
+    margin-left:10px ;
+    min-height: 100vh;
+
+}
+.bo-nav{
+    width: 100%;
+    
+}
+.bo-nav .anker-bo{
+    border-radius: 6px;
+    margin:0px 10px 4px 10px
+}
+
+.bo-nav:hover{
+    border-left: 4px solid red;
+   
+}
+.anker-bo:hover {
+ background-color: rgba(255, 70, 79, 0.322);
+
+}
+.anker-bo a{
+    color:#9c9c9c;
+    font-weight: 600;
+}
+.anker-bo a:hover {
+    color: rgb(255, 40, 76);
+}
+@media(max-width:568px) {
+    .sidebar{
+        min-height: fit-content;
+
+    }
+    
+}
