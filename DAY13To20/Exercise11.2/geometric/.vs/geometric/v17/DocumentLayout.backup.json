@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\geometric\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|d:\\ct-product-training-2025\\geometric\\geometric\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|solutionrelative:geometric\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|d:\\ct-product-training-2025\\geometric\\geometric\\rectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|solutionrelative:geometric\\rectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|d:\\ct-product-training-2025\\geometric\\geometric\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|solutionrelative:geometric\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|d:\\ct-product-training-2025\\geometric\\geometric\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|solutionrelative:geometric\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|d:\\ct-product-training-2025\\geometric\\geometric\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6F2BED-1406-4E98-9416-890462382BEF}|geometric\\geometric.csproj|solutionrelative:geometric\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Triangle.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Triangle.cs",
+              "RelativeDocumentMoniker": "geometric\\Triangle.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Triangle.cs*",
+              "RelativeToolTip": "geometric\\Triangle.cs*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAmwBsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T07:03:07.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Circle.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Circle.cs",
+              "RelativeDocumentMoniker": "geometric\\Circle.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Circle.cs*",
+              "RelativeToolTip": "geometric\\Circle.cs*",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T07:00:33.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rectangle.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Rectangle.cs",
+              "RelativeDocumentMoniker": "geometric\\Rectangle.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Rectangle.cs*",
+              "RelativeToolTip": "geometric\\Rectangle.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T06:45:11.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shape.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Shape.cs",
+              "RelativeDocumentMoniker": "geometric\\Shape.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Shape.cs",
+              "RelativeToolTip": "geometric\\Shape.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T06:41:01.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Program.cs",
+              "RelativeDocumentMoniker": "geometric\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\geometric\\geometric\\Program.cs",
+              "RelativeToolTip": "geometric\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T06:38:02.208Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

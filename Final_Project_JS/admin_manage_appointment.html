@@ -68,7 +68,14 @@
         .main {
             
             min-height: 100vh;
-        }
+          transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
         .main .header{
             align-items: center;
             justify-content: center;
@@ -163,6 +170,15 @@
                 margin-right: 10px;
                
             }
+            .acc-btn{
+                background-color:green ;
+                color: white;
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                margin-right: 10px;
+               
+            }
             
 
 
@@ -241,11 +257,14 @@
                <table style="text-align: left;">
                 <thead>
                     <th>ID</th>
+                    <th>Name</th>
                     <th>Service</th>
                     <th>Provider</th>
                     <th>Date</th>
                     <th>Time</th>
                     <th>Action</th>
+                    <th>Accept</th>
+                
                 </thead>
                 <tbody id="table-body">
 
@@ -286,33 +305,54 @@
         appointments.forEach((appointment,index) => {
             const tr=document.createElement("TR");
             const id=document.createElement("TD");
+            const name=document.createElement("TD");
             const service=document.createElement("TD");
             const provider=document.createElement("TD");
             const date=document.createElement("TD");
             const time=document.createElement("TD");
           
             const del =document.createElement("TD");
+            const acceptd =document.createElement("TD");
 
             const del_btn=document.createElement("button");
             const edit_btn=document.createElement("button");
+            const acc_btn=document.createElement("button");
             del_btn.append(document.createTextNode("cancel"));
             edit_btn.append(document.createTextNode("Edit"));
+            acc_btn.append(document.createTextNode("Accept"));
+        
+
             edit_btn.className="edit-btn"
             
             del_btn.className="del-btn"
+            acc_btn.className="acc-btn"
+
+            const users=JSON.parse(localStorage.getItem("users"))||"";
 
             
-
+            const user=users.find(user=>user.id===appointment.id)
 
             
 
             id.append(appointment.id)
+            name.append(user.name)
             service.append(appointment.service)
             provider.append(appointment.provider)
             date.append(appointment.date)
             time.append(appointment.time)
-              del.append(edit_btn)
-            del.append(del_btn)
+            del.append(edit_btn)
+             del.append(del_btn)
+             if(appointment.action!=="Accepted"){
+                    acceptd.append(acc_btn)
+             }else{
+                let acc=document.textContent="Accepted";
+                
+                acceptd.append(acc)
+                acceptd.style.color="green";
+             }
+           
+            
+
           
             del_btn.addEventListener("click",()=>{
                  const confirmDelete = confirm(`Delete appointment "${appointment.appid}"?`);
@@ -324,37 +364,53 @@
                      }
             })
 
+
             tr.appendChild(id);
+            tr.appendChild(name);
             tr.appendChild(service);
             tr.appendChild(provider);
             tr.appendChild(date);
             tr.appendChild(time);
-            tr.append(del)
+            tr.append(del);
+            tr.append(acceptd);
+            
 
             tabbody.appendChild(tr);
             edit_btn.addEventListener("click", () => {
-    const newDate = prompt("Enter new date (YYYY-MM-DD):", appointment.date);
-    const newTime = prompt("Enter new time (HH:MM):", appointment.time);
+                const newDate = prompt("Enter new date (YYYY-MM-DD):", appointment.date);
+                const newTime = prompt("Enter new time (HH:MM):", appointment.time);
 
-    if (!newDate || !newTime) {
-      alert("Date and time cannot be empty!");
-      return;
-    }
+                if (!newDate || !newTime) {
+                alert("Date and time cannot be empty!");
+                return;
+                }
 
    
-    const index = appointments.findIndex(app => app.appid === appointment.appid);
-    if (index !== -1) {
-      appointments[index].date = newDate;
-      appointments[index].time = newTime;
-      localStorage.setItem("appointments", JSON.stringify(appointments));
+                const index = appointments.findIndex(app => app.appid === appointment.appid);
+                if (index !== -1) {
+                appointments[index].date = newDate;
+                appointments[index].time = newTime;
+                localStorage.setItem("appointments", JSON.stringify(appointments));
 
-     
-      date.textContent = newDate;
-      time.textContent = newTime;
+                
+                date.textContent = newDate;
+                time.textContent = newTime;
 
-      alert("Appointment updated successfully.");
-    }
+                alert("Appointment updated successfully.");
+                }
   });
+                acc_btn.addEventListener("click",()=>{
+                    const confim=confirm("Do you want to accept the Appointment");
+                    if (confim){
+                        const newaction="Accepted";
+                        const index = appointments.findIndex(app => app.appid === appointment.appid);
+                        if(index!==-1){
+                        appointments[index].action=newaction;
+                        localStorage.setItem("appointments",JSON.stringify(appointments));
+                        window.location.href="admin_manage_appointment.html"
+                        }
+                }
+                })
             
 
         });

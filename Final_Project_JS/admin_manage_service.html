@@ -68,7 +68,14 @@
         .main {
             
             min-height: 100vh;
-        }
+          transition: transform 0.9s ease-in-out, opacity 0.5s ease;
+             animation: fadeIn 0.8s ease-in-out;
+         }
+
+            @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+            }
         .main .header{
             align-items: center;
             justify-content: center;
@@ -110,39 +117,57 @@
                 margin: 30px;
                 text-align: center;
                 
-            } 
-            .main .sub-main .sec1 .Total-appoinment{
-             background:linear-gradient(45deg, #ff2222, #ff782f ,rgb(202, 0, 0)); 
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                height: 90px;
-                align-items: center;
-                background-size: 300%;  
-                border: 1px solid #bb000093;
-                border-radius: 20px; 
+          }
+             .main .sub-main .manageservice{
+                margin: 30px;
+             }
+            .main .sub-main .manageservice input{
+                width: 90%;
                 padding: 10px;
-                transition: transform 0.6s ease-in-out;             
+                border: none;
+                border-radius: 10px;
+                
             }
-            .main .sub-main .sec1 .sec1-right{
-              font-family: fantasy;
-              color: #ffd08e;
+            .main .sub-main .manageservice .ser-btn{
+                background-color: rgb(52, 52, 184);
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                
             }
-            .main .sub-main .sec1 .sec1-right span{
-              font-family: cursive;
-              line-height: 25px;
-               color: #ffad7d;
-              
-              
+            .main .sub-main .manageprovider{
+                
+                margin: 30px;
+             }
+            .main .sub-main .manageprovider input{
+                width: 80%;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                
             }
-            .main .sub-main .sec1 .card-icon{
-              font-size: 50px;
-               border-radius: 40px;
-               
-               color: #8e0005;
-               
-             
-               margin-left: 40px;
+            .main .sub-main .manageprovider .addprovider{
+                background-color: rgb(52, 52, 184);
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                
             }
+            .main .sub-main ul{
+                list-style-type: square;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .main .sub-main ul button{
+                border-radius: 10px;
+                border: none;
+                background-color: red;
+                color: white;
+                padding: 10px;
+                margin: 10px;
+            }
+            
 
             @keyframes gradientAnimation {
             0% {
@@ -234,18 +259,18 @@
             </div>
             <div class="sub-main">
                
-                <div>
+                <div class="manageservice">
                 <h3>Manage Services</h3>
                 <input type="text" id="newService" placeholder="Enter Service Name">
-                <button onclick="addService()">Add Service</button>
+                <button onclick="addService()" class="ser-btn">Add Service</button>
                 <ul id="serviceList"></ul>
                 </div>
 
 
-                <div>
+                <div class="manageprovider">
                 <h3>Manage Providers</h3>
                 <input type="text" id="newProvider" placeholder="Enter Provider Name">
-                <button onclick="addProvider()">Add Provider</button>
+                <button onclick="addProvider()" class="addprovider">Add Provider</button>
                 <ul id="providerList"></ul>
                 </div>
                 </div>
@@ -332,12 +357,7 @@ loadAdminData();
         const users=JSON.parse(localStorage.getItem("users"))||"";
 
       const appointments=JSON.parse(localStorage.getItem("appointments"))||"";
-      const lenapp=appointments.length;
-
-
-        const length=users.length;
-        document.getElementById("Total-user").innerHTML=length;
-        document.getElementById("Total-appoinment").innerHTML=lenapp;
+     
         function admindash(){
             window.location.href=`admin_dashboard.html`;
         }

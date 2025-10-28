@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40C77B63-1F5D-4E88-993E-C3AB3DD64FCD}|DAY16\\DAY16.csproj|d:\\ct-product-training-2025\\day13to20\\exercise6.3\\day16\\day16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40C77B63-1F5D-4E88-993E-C3AB3DD64FCD}|DAY16\\DAY16.csproj|solutionrelative:day16\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40C77B63-1F5D-4E88-993E-C3AB3DD64FCD}|DAY16\\DAY16.csproj|d:\\ct-product-training-2025\\day13to20\\exercise6.3\\day16\\day16\\division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40C77B63-1F5D-4E88-993E-C3AB3DD64FCD}|DAY16\\DAY16.csproj|solutionrelative:day16\\division.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Division.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\Division.cs",
+              "RelativeDocumentMoniker": "DAY16\\Division.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\Division.cs",
+              "RelativeToolTip": "DAY16\\Division.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T06:17:14.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\Program.cs",
+              "RelativeDocumentMoniker": "DAY16\\Program.cs",
+              "ToolTip": "D:\\CT-Product-Training-2025\\DAY13To20\\Exercise6.3\\DAY16\\DAY16\\Program.cs",
+              "RelativeToolTip": "DAY16\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAoAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T05:57:37.266Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

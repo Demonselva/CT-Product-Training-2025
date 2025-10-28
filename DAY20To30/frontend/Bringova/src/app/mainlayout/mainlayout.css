@@ -1,0 +1,32 @@
+.main {
+    margin: 100px 140px;
+    min-height: 100vh;
+    box-shadow: 0px 0px 80px rgba(255, 192, 227, 0.493);
+}
+
+.main .header {
+    margin-left: 0px;
+}
+
+.main .submain {
+    background-color: rgba(255, 229, 245, 0.473);
+    border: none;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+
+@media (max-width: 760px) {
+    .main {
+        margin: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    .main .submain {
+    background-color: rgba(255, 229, 245, 0.473);
+    border: none;
+}
+}

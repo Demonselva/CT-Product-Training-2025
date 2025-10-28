@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+</head>
+<body>
+    <div class="qcontainer">
+        <h1 id="para"></h1>
+        <div class="choice ">
+            
+            <input onclick="check(0)" type="radio" id="opt1" name="opt"><label for=""><span id="opt1l"></span></label> <br>
+            <input onclick="check(1)"  type="radio" id="opt2" name="opt"><label for=""><span id="opt2l"></span></label><br>
+            <input onclick="check(2)"  type="radio" id="opt3"name="opt"><label for=""><span id="opt3l"></span></label><br>
+            <input  onclick="check(3)"  type="radio" id="opt4" name="opt"><label for=""><span id="opt4l"></span></label><br>
+            <br>
+          
+            <div><button type="button" onclick="nextquestion()">Next</button></div>
+        </div>
+    </div>
+
+    <script>
+        function displayoverall(){
+            document.writeln(`total Questions ${questions.length}`);
+            correctc=0;
+            let j=0
+            while(j<questions.length){
+                if (questions[j].anwser===anwsers[j]){
+                    correctc+=1;
+                }
+                 j++;
+                
+            }
+
+            document.writeln(`anwsers ${correctc}`);
+        }
+       
+        function nextquestion(){
+
+            i++;
+            if(i<questions.length){
+        document.getElementById("opt1").checked=false;
+        document.getElementById("opt2").checked=false;
+        document.getElementById("opt3").checked=false;
+        document.getElementById("opt4").checked=false;
+                loadq()
+            }else{
+                alert("quiz completed")
+               
+               displayoverall();
+            }
+            
+            
+
+        }
+        anwsers=[]
+        function loadq(){
+            let q=questions[i]
+             let question=document.getElementById("para")
+        let choicees=document.getElementById("choice")
+        let option1l=document.getElementById("opt1l")
+        let option2l=document.getElementById("opt2l")
+        let option3l=document.getElementById("opt3l")
+        let option4l=document.getElementById("opt4l")
+        let option1=document.getElementById("opt1");
+        let option2=document.getElementById("opt2");
+        let option3=document.getElementById("opt3");
+        let option4=document.getElementById("opt4");
+        let opt=document.createElement("INPUT");
+        opt.setAttribute("type","radio")
+        option1.append(opt)
+        option2.append(opt)
+        option3.append(opt)
+        option4.append(opt)
+    
+
+
+        question.innerHTML=q.question;
+        
+        option1.value=q.choices[0]  
+        option1l.innerHTML=q.choices[0]  
+        option2.value=q.choices[1]
+        option2l.innerHTML=q.choices[1]
+        option3.value=q.choices[2]
+        option3l.innerHTML=q.choices[2]
+        option4.value=q.choices[3]
+        option4l.innerHTML=q.choices[3]
+
+
+       
+
+    
+
+        }
+        function check(anwser){
+            anwsers.push(anwser)
+            j=questions[i].anwser
+            an=questions[i].choices[j];
+            if(anwser===questions[i].anwser){
+
+                 alert("correct");
+              
+            }
+            else{
+                alert("wrong")
+                alert(`correct anwser is ${an}`)
+            }
+            console.log(anwser)
+            nextquestion()
+        
+
+            
+            
+ 
+        }
+       
+        let i=0;
+        let questions=[{question:"what is your Name",choices:["selva","kumar","santhosh","hema"],anwser:0},
+        {question:"what is your age",choices:[12,13,14,15],anwser:2},
+        {question:"what is your college year",choices:["4th","1st","2nd","3rd"],anwser:3}]
+        
+        
+    
+
+       loadq();
+     
+    </script>
+</body>
+</html>

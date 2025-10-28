@@ -1,0 +1,15 @@
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\bin\Debug\net8.0\LinQuerry.exe
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\bin\Debug\net8.0\LinQuerry.deps.json
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\bin\Debug\net8.0\LinQuerry.runtimeconfig.json
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\bin\Debug\net8.0\LinQuerry.dll
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\bin\Debug\net8.0\LinQuerry.pdb
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.GeneratedMSBuildEditorConfig.editorconfig
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.AssemblyInfoInputs.cache
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.AssemblyInfo.cs
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.csproj.CoreCompileInputs.cache
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.sourcelink.json
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.dll
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\refint\LinQuerry.dll
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.pdb
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\LinQuerry.genruntimeconfig.cache
+D:\CT-Product-Training-2025\LinQuerry\LinQuerry\obj\Debug\net8.0\ref\LinQuerry.dll

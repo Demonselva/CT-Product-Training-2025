@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link rel="stylesheet" href="./todo.css">
+</head>
+<body>
+    
+    <div class="ucontainer">
+        <div></div>
+        <div class="container" >
+        <div class="form-container">
+            <div>
+                <h1>Trainee Information Form</h1>
+            </div>
+            <div>
+                <form method="post">
+                    <table border="0">
+                     
+                        <tr>
+                           <td><label for="Uname">User Name :</label></td> 
+                           <td> <input type="text" id="Uname"  placeholder="Enter your Name "></td>
+                        </tr>
+           
+                    <tr>
+                        <td> <label for="Dob">Date of birth :</label></td>
+                        <td> <input type="date" id="Dob" placeholder="Date"></td>
+                    </tr>
+                    
+                   
+                   
+                    
+                    <tr>
+                        <td><label for="Gen">Gender :</label></td>
+                        <td><select name="gen" id="Gen">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select></td>
+                    </tr>
+                    </table>
+                    
+                   
+                    
+                    
+                    
+                 
+                    <button type="submit" onclick="adduser()">Submit</button> 
+
+                </form>
+            </div>
+
+        </div>
+        <div class="result-container">
+            
+            <table >
+                <thead>
+                    <th>Username</th>
+                    <th>Date Of Birth</th>
+                    <th>Gender</th>
+                    <th>Femzar</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="Tablebody"></tbody>
+            </table>
+        </div>
+        </div>
+        <div>
+           
+        </div>
+    </div>
+    
+
+    <script src="todo.js">
+        
+
+    </script>
+</body>
+</html>
