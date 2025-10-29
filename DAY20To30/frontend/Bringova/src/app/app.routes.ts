@@ -11,6 +11,8 @@ import { Offers } from './offers/offers';
 import { Admin } from './admin/admin';
 import { Addproducts } from './addproducts/addproducts';
 import { Productlist } from './productlist/productlist';
+import { Component } from '@angular/core';
+import { Demo } from './demo/demo';
 
 export const routes: Routes = [
     {
@@ -36,6 +38,7 @@ export const routes: Routes = [
             {path:'message',component:Message},
             {path:'products',component:Products},
             {path:'offers',component:Offers},
+            {path:'demo',component:Demo},
         ]
     },
       {
