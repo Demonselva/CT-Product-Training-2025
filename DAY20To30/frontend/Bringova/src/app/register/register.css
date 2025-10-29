@@ -1,0 +1,27 @@
+body {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  background-color: #ffffffd9;
+}
+
+.register-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-success {
+  background-color: #38ef7d;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #32d17b;
+}
+    

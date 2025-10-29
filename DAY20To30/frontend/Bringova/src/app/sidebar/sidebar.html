@@ -1,22 +1,19 @@
 <div class="sidebar">
-  <div id="nav-brand">
+ 
+  <div class="nav-brand pb-3">
     <i class="fa fa-bag-shopping "></i> Bringova
   </div>
+   <button class="btn  text-danger d-lg-none  m-2 Menu" type="button" style="border: 1px solid rgb(255, 66, 97);"
+        data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
+        aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+  <i class="fa-solid fa-bars fs-4"></i><b class="p-1"> Menu</b>
+</button>
 
  
-  <div class="d-lg-none">
-    <button class="btn btn-danger  mb-3 ms-2 mt-2" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#sidebarMenu"
-            aria-expanded="false"
-            aria-controls="sidebarMenu">
-      <i class="fa fa-bars"></i>
-    </button>
-  </div>
 
 
-  <div class="navbar rounded collapse d-lg-block" id="sidebarMenu">
+
+  <div class="navbar rounded  collapse  d-lg-block" id="sidebarMenu">
     <nav class="nav mt-3">
       <div class="bo-nav">
         <div class="anker-bo">
@@ -56,7 +53,7 @@
 
       <div class="bo-nav">
         <div class="anker-bo">
-          <a routerLink="demo" class="nav-link"><i class="fa fa-gear"></i> Demo</a>
+          <a routerLink="update-profile" class="nav-link"><i class="fa fa-user"></i> Update Profile</a>
         </div>
       </div>
     </nav>

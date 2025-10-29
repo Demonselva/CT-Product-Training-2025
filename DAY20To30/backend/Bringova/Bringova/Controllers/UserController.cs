@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
+﻿using Bringova.Models;
+using Bringova.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bringova.Controllers
@@ -9,138 +10,90 @@ namespace Bringova.Controllers
     [EnableCors("Bringova")]
     public class UserController : ControllerBase
     {
-        public List<string> usersdetails = new List<string>
+        private readonly AuthService _authService;
+
+        public UserController(AuthService authService)
         {
-            "car","bike","flight","van","cycle"
-        };
+            _authService = authService;
+        }
 
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] RegisterRequest request)
+        {
+            if (string.IsNullOrEmpty(request.email) || string.IsNullOrEmpty(request.password))
+                return BadRequest("Email and Password are required");
 
+            bool success = _authService.RegisterUser(request);
+            if (success)
+                return Ok(new { message = "User registered successfully" });
+
+            return BadRequest("Registration failed");
+        }
+
+      
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginRequest request)
+        {
+            var user = _authService.ValidateUser(request);
+            if (user == null)
+                return Unauthorized(new { message = "Invalid email or password" });
+
+            return Ok(new
+            {
+                message = "Login successful",
+                user
+            });
+        }
+
+        
         [HttpGet]
-        public List<string> getallusers()
+        public IActionResult GetAllUsers()
         {
-            return usersdetails;
-
+            var users = _authService.GetAllUsers();
+            return Ok(users);
         }
 
         [HttpGet("{id}")]
-        public string getallusers2(int id)
+        public IActionResult GetUserById(int id)
         {
-            return usersdetails[id];
+            var user = _authService.GetUserById(id);
+            if (user == null)
+                return NotFound(new { message = "User not found" });
 
+            return Ok(user);
         }
+
+       
+        [HttpPut("{id}")]
+        public IActionResult UpdateUser(int id, [FromBody] User user)
+        {
+            bool success = _authService.UpdateUser(id, user);
+            if (success)
+                return Ok(new { message = "User updated successfully" });
+
+            return BadRequest(new { message = "Update failed" });
+        }
+
+        
         [HttpDelete("{id}")]
-        public void deleteuser(int id) { 
-             usersdetails.RemoveAt(id);
-            getallusers();
+        public IActionResult DeleteUser(int id)
+        {
+            bool success = _authService.DeleteUser(id);
+            if (success)
+                return Ok(new { message = "User deleted successfully" });
+
+            return NotFound(new { message = "User not found" });
         }
+        [HttpPut("update-password/{id}")]
+        public IActionResult UpdatePassword(int id, [FromBody] PasswordUpdateRequest request)
+        {
+            var result = _authService.UpdatePassword(id, request.CurrentPassword, request.NewPassword);
+
+            if (!result)
+                return BadRequest(new { message = "Invalid current password or user not found" });
+
+            return Ok(new { message = "Password updated successfully" });
+        }
+
     }
 }
-//using Microsoft.AspNetCore.Cors;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.Data.SqlClient;
-//using Microsoft.Extensions.Configuration;
-
-//namespace Bringova.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    [EnableCors("Bringova")]
-//    public class UserController : ControllerBase
-//    {
-//        private readonly IConfiguration _configuration;
-
-//        public UserController(IConfiguration configuration)
-//        {
-//            _configuration = configuration;
-//        }
-
-//        // GET: api/User
-//        [HttpGet]
-//        public List<User> GetAllUsers()
-//        {
-//            List<User> users = new List<User>();
-//            string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-//            using (SqlConnection conn = new SqlConnection(connectionString))
-//            {
-//                conn.Open();
-//                string query = "SELECT Id, Name, Email, Role FROM Users";
-//                SqlCommand cmd = new SqlCommand(query, conn);
-//                SqlDataReader reader = cmd.ExecuteReader();
-
-//                while (reader.Read())
-//                {
-//                    users.Add(new User
-//                    {
-//                        Id = (int)reader["Id"],
-//                        Name = reader["Name"].ToString(),
-//                        Email = reader["Email"].ToString(),
-//                        Role = reader["Role"].ToString()
-//                    });
-//                }
-//            }
-
-//            return users;
-//        }
-
-//        // GET: api/User/5
-//        [HttpGet("{id}")]
-//        public User GetUser(int id)
-//        {
-//            User user = null;
-//            string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-//            using (SqlConnection conn = new SqlConnection(connectionString))
-//            {
-//                conn.Open();
-//                string query = "SELECT Id, Name, Email, Role FROM Users WHERE Id=@Id";
-//                SqlCommand cmd = new SqlCommand(query, conn);
-//                cmd.Parameters.AddWithValue("@Id", id);
-
-//                SqlDataReader reader = cmd.ExecuteReader();
-//                if (reader.Read())
-//                {
-//                    user = new User
-//                    {
-//                        Id = (int)reader["Id"],
-//                        Name = reader["Name"].ToString(),
-//                        Email = reader["Email"].ToString(),
-//                        Role = reader["Role"].ToString()
-//                    };
-//                }
-//            }
-
-//            return user;
-//        }
-
-//        // DELETE: api/User/5
-//        [HttpDelete("{id}")]
-//        public IActionResult DeleteUser(int id)
-//        {
-//            string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-//            using (SqlConnection conn = new SqlConnection(connectionString))
-//            {
-//                conn.Open();
-//                string query = "DELETE FROM Users WHERE Id=@Id";
-//                SqlCommand cmd = new SqlCommand(query, conn);
-//                cmd.Parameters.AddWithValue("@Id", id);
-
-//                int rowsAffected = cmd.ExecuteNonQuery();
-//                if (rowsAffected > 0)
-//                    return Ok("Deleted successfully");
-//                else
-//                    return NotFound("User not found");
-//            }
-//        }
-//    }
-
-//    // User model
-//    public class User
-//    {
-//        public int Id { get; set; }
-//        public string Name { get; set; }
-//        public string Email { get; set; }
-//        public string Role { get; set; }
-//    }
-//}

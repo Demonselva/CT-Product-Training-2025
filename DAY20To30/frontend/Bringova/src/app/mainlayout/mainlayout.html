@@ -3,62 +3,86 @@
         <div class="col-lg-3 col-sm-12 col-md-3 rounded g-0 sidebar">
             <app-sidebar></app-sidebar>
         </div>
+        <!-- main -->
         <div class="col-lg-9 col-sm-12 col-md-9">
+            <!-- header -->
             <div class="row header">
                 <div class="col-lg-12">
-                    <div class="m-2">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <button>dd</button>
+
+                    <div class="row">
+
+                        <div class="col-lg-5 col-md-12">
+                            <div id="search-bar" class="p- m-2 rounded card">
+                                <div class="card-body p-1">
+                                     <button type="submit"
+                                    style="width: 50px; border:none; background-color: white; color: grey;" ><i
+                                        class="fa fa-search"></i></button>
+                                <input type="text" name="searchbar" placeholder="Search" style="border: none;">
+                                </div>
+                               
                             </div>
-                            <div class="col-lg-4">
-                                <div class="p-4">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="flexSwitchCheckChecked" checked>
-                                        <label class="form-check-label" for="flexSwitchCheckChecked">Busy Mode</label>
-                                    </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4">
+                            <div class="p-1 m-2">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch"
+                                        id="flexSwitchCheckChecked" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Busy Mode</label>
+
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <button>dd</button>
-                            </div>
+                        </div>
 
+                        <div class="col-lg-1 col-md-4 mt-2">
+                            <a></a> <i class="fa fa-bell"></i>
+                        </div>
+
+                        <div class="col-lg-3">
+                            <div class="p-1 m-2">
+                                <div class="dropdown ms-auto">
+                                    <button
+                                        class="btn btn-light dropdown-toggle d-flex align-items-center shadow-sm px-3 rounded-pill"
+                                        type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-circle fs-5 me-2 text-success"></i>
+                                        <span class="fw-semibold">{{ user?.username || 'User' }}</span>
+                                    </button>
+
+                                    <ul class="dropdown-menu dropdown-menu-end shadow border-0 mt-2"
+                                        aria-labelledby="userDropdown" style="border-radius: 10px;">
+
+                                        <li>
+                                            <button class="dropdown-item text-danger d-flex align-items-center"
+                                                (click)="logout()">
+                                                <i class="bi bi-box-arrow-right me-2"></i>
+                                                Logout
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
                         </div>
 
                     </div>
+
                 </div>
                 <div class="col-lg-12">
                     <br>
                 </div>
             </div>
 
-
-            <div class="card p-4 m-1  submain">
-                <router-outlet></router-outlet>
-                <!-- <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
+            <!-- #submain -->
+            <div class="card p-4 m-3 submain">
+                <!-- @if(!routerOutlet.isActivated){
+                <div class="text-center">
+                    <h2>Welcome to Bringova Shopping 🛍️</h2>
+                    <p>Explore our platform and start shopping!</p>
                 </div>
-
-                <div class="mt-4 p-5 bg-primary text-white rounded">
-                    <h1>Jumbotron Example</h1>
-                    <p>Lorem ipsum...</p>
-                </div>
-            </div> -->
+            } -->
+<!-- #routerOutlet="outlet" -->
+                <router-outlet ></router-outlet>
             </div>
 
 

@@ -17,7 +17,7 @@ export class Demo implements OnInit {
 
   }
  getAllUsers() {
-  this.http.get("https://localhost:7296/api/User").subscribe({
+  this.http.get("https://localhost:7296/api/Demo").subscribe({
     next: (result) => {
       this.userdetails.push(result)
       console.log(result);

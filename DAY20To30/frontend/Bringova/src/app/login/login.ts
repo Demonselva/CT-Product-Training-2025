@@ -1,43 +1,48 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink ,Router} from '@angular/router';
 import { Auth} from '../services/auth';
 import { FormBuilder, FormGroup, MinLengthValidator, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { UserService } from '../services/user';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,CommonModule],
   templateUrl: './login.html',
   styleUrl: './login.css',
 })
 export class Login {
-  loginForm: FormGroup;
+  message = '';
+  private fb=inject(FormBuilder)
+  loginForm = this.fb.group({
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', Validators.required]
+  });
 
-  constructor(private fb: FormBuilder, private auth: Auth, private router: Router) {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
-    });
-  }
+  constructor( private userService: UserService, private router: Router) {}
 
-  validate() {
-    debugger;
-    const { email, password } = this.loginForm.value;
-    debugger;
-    this.auth.login(email, password).subscribe(success => {
-      if (success) {
-        alert('Login successful!');
-        // Placeholder: Navigate to dashboard or main page
-        this.router.navigate(['/main']);
-      } else {
-        alert('Invalid email or password');
+  onSubmit() {
+  if (this.loginForm.valid) {
+    this.userService.login(this.loginForm.value).subscribe({
+      next: (res: any) => {
+        if (res && res.user.user_id) {
+          
+          localStorage.setItem('user', JSON.stringify(res.user));
+
+          this.router.navigate(['/main', res.user.user_id]);
+        } else {
+          this.message = 'Login successful but user ID not found!';
+        }
+      },
+      error: (err) => {
+        this.message = 'Invalid credentials';
       }
     });
   }
+}
 
-  goToRegister() {
-    this.router.navigate(['/register']);
-  }
-  goToAdmin(){
-    this.router.navigate(['/admin'])
-  }
+GotoRegister() {
+  this.router.navigate(['/register']);
+}
+
 }
