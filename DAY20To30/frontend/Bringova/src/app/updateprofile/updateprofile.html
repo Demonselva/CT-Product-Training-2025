@@ -1,7 +1,7 @@
-<!-- <div class="container my-5">
-  <div class="row g-4 justify-content-center"> -->
+<div class="container my-5">
+  <div class="row g-4 justify-content-center">
     <!-- Profile Update Card -->
-    <!-- <div class="col-lg-6 col-md-8">
+    <div class="col-lg-6 col-md-8">
       <div class="card shadow-lg border-0 p-4 rounded-4">
         <h4 class="text-center text-success mb-4 fw-bold">
           <i class="bi bi-person-lines-fill me-2"></i>Update Profile
@@ -32,7 +32,7 @@
             <div class="col-md-6 mb-3">
               <label class="form-label fw-semibold">Date of Birth</label>
               <input
-                type="date"
+                type="text"
                 formControlName="dob"
                 class="form-control rounded-pill"
               />
@@ -40,10 +40,7 @@
 
             <div class="col-md-6 mb-3">
               <label class="form-label fw-semibold">Gender</label>
-              <select
-                formControlName="gender"
-                class="form-select rounded-pill"
-              >
+              <select formControlName="gender" class="form-select rounded-pill">
                 <option value="">Select gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -69,16 +66,46 @@
             <i class="bi bi-save2 me-2"></i>Save Changes
           </button>
         </form>
+
+        <hr class="my-4" />
+
+        <div class="text-center">
+          <button
+            class="btn btn-outline-primary w-100 py-2 rounded-pill fw-semibold shadow-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#changePasswordModal"
+          >
+            <i class="bi bi-lock-fill me-2"></i>Change Password
+          </button>
+        </div>
       </div>
-    </div> -->
+    </div>
+  </div>
+</div>
 
-    <!-- Change Password Card -->
-    <!-- <div class="col-lg-4 col-md-8">
-      <div class="card shadow-lg border-0 p-4 rounded-4">
-        <h4 class="text-center text-primary mb-4 fw-bold">
+<!-- Change Password Modal -->
+<div
+  class="modal fade"
+  id="changePasswordModal"
+  tabindex="-1"
+  aria-labelledby="changePasswordModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow-lg">
+      <div class="modal-header bg-primary text-white rounded-top-4">
+        <h5 class="modal-title fw-bold" id="changePasswordModalLabel">
           <i class="bi bi-lock-fill me-2"></i>Change Password
-        </h4>
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
 
+      <div class="modal-body">
         <form [formGroup]="passwordForm" (ngSubmit)="onChangePassword()">
           <div class="mb-3">
             <label class="form-label fw-semibold">Current Password</label>
@@ -107,14 +134,15 @@
             <i class="bi bi-arrow-repeat me-2"></i>Update Password
           </button>
         </form>
+
+        <div *ngIf="message" class="text-center mt-4">
+          <div
+            class="alert alert-info d-inline-block px-4 py-2 rounded-pill shadow-sm"
+          >
+            {{ message }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
- -->
-  <!-- Status Message -->
-  <!-- <div *ngIf="message" class="text-center mt-4">
-    <div class="alert alert-info d-inline-block px-4 py-2 rounded-pill shadow-sm">
-      {{ message }}
-    </div>
-  </div>
-</div> -->
+</div>

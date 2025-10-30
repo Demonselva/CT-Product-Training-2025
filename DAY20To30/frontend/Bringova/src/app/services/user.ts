@@ -22,7 +22,7 @@ export class UserService {
   }
 
   updateUser(id: number, data: any) {
-    return this.http.put(`${this.apiUrl}/update/${id}`, data);
+    return this.http.put(`${this.apiUrl}/${id}`, data);
   }
 
   updatePassword(id: number, data: any) {

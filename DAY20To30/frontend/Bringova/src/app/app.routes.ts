@@ -14,6 +14,7 @@ import { Productlist } from './admincom/productlist/productlist';
 import { Component } from '@angular/core';
 import { Demo } from './demo/demo';
 import { Updateprofile } from './updateprofile/updateprofile';
+import { Adminlogin } from './adminlogin/adminlogin';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,10 @@ export const routes: Routes = [
     {
         path:'register',
         component:Register
+    },
+     {
+        path:'admin-login',
+        component:Adminlogin
     },
     {
         path:'main/:id',

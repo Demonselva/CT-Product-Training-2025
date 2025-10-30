@@ -1,0 +1,39 @@
+<div class="container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="card shadow-lg p-4 login-card" style="max-width: 400px; width: 100%;">
+    <h2 class="text-center mb-4 fw-bold text-primary">Admin Login</h2>
+
+    <form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control rounded-pill"
+          placeholder="Enter username"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          class="form-control rounded-pill"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <button
+        class="btn btn-primary w-100 py-2 fw-semibold rounded-pill"
+        [disabled]="adminForm.invalid"
+      >
+        Login
+      </button>
+    </form>
+
+    <div class="text-center mt-3">
+      <button (click)="GotoLogin()" class="btn btn-link fw-semibold text-primary px-3">Login</button>
+      <button (click)="GotoRegister()" class="btn btn-link fw-semibold text-primary px-3">Register</button>
+    </div>
+  </div>
+</div>

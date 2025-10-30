@@ -1,48 +1,28 @@
-<div class="card main">
-    <div class="row ">
-        <div class="col-lg-3 col-sm-12 col-md-3 rounded g-0 sidebar">
-           <app-sidebaradmin></app-sidebaradmin>
-        </div>
-        <div class="col-lg-9 col-sm-12 col-md-9">
-            <div class="row header">
-                <div class="col-lg-12">
-                    <div>                     
-                        <button class="btn  btn-danger" (click)="logout()">Log out</button>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <br>
-                </div>
-            </div>
-            
-            
-            <div class="card p-4 m-1  submain">
-                <router-outlet></router-outlet>
-                <!-- <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card bg-white">
-                            hhh
-                        </div>
-                    </div>
-                </div>
+<div class="page-container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="card main shadow-lg border-0 rounded-4">
+    <div class="row g-0">
 
-                <div class="mt-4 p-5 bg-primary text-white rounded">
-                    <h1>Jumbotron Example</h1>
-                    <p>Lorem ipsum...</p>
-                </div>
-            </div> -->
-        </div>
-        
+        <div class="col-lg-3 col-md-3 col-sm-12 sidebar p-3 rounded-start-4">
+        <app-sidebaradmin></app-sidebaradmin>
+      </div>
 
+      <!-- Main content -->
+      <div class="col-lg-9 col-md-9 col-sm-12 bg-light-subtle rounded-end-4">
+
+        <!-- Header -->
+        <div class="row align-items-center header p-3 border-bottom bg-white rounded-top-end-4">
+          <div class="col text-end">
+            <button class="btn btn-outline-danger px-4 fw-semibold" (click)="logout()">
+              <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+            </button>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="card submain border-0 shadow-sm p-4 m-3 bg-white rounded-4 animate__animated animate__fadeIn">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

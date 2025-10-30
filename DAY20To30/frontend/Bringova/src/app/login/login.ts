@@ -44,5 +44,8 @@ export class Login {
 GotoRegister() {
   this.router.navigate(['/register']);
 }
+GotoAdmin() {
+  this.router.navigate(['/admin-login']);
+}
 
 }
