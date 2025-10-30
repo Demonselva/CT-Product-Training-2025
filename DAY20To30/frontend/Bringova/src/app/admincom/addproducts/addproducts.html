@@ -1,1 +1,56 @@
-<p>addproducts works!</p>
+<div class="container mt-4">
+  <h2 class="text-center mb-4 text-primary">Add New Product</h2>
+
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="card shadow-lg p-4">
+    <div class="mb-3">
+      <label class="form-label">Product Name</label>
+      <input type="text" class="form-control" formControlName="product_name" placeholder="Enter product name" />
+      <div class="text-danger"
+        *ngIf="productForm.get('product_name')?.touched && productForm.get('product_name')?.invalid">
+        Product name is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Product Description</label>
+      <textarea class="form-control" rows="3" formControlName="product_description"
+        placeholder="Enter product description"></textarea>
+      <div class="text-danger"
+        *ngIf="productForm.get('product_description')?.touched && productForm.get('product_description')?.invalid">
+        Product description is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Price</label>
+      <input type="number" class="form-control" formControlName="price" placeholder="Enter product price" />
+      <div class="text-danger" *ngIf="productForm.get('price')?.touched && productForm.get('price')?.invalid">
+        Valid price is required
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Offer Price (Optional)</label>
+      <input type="number" class="form-control" formControlName="offer_price" placeholder="Enter offer price if any" />
+    </div>
+
+    <div class="mb-3">
+      <label for="stock" class="form-label">Stock Status</label>
+      <select id="stock" class="form-select" formControlName="stock">
+        <optgroup label="Select Availability">
+          <option value="" disabled selected>Select stock status</option>
+          <option value="Available" class="text-success">Available</option>
+          <option value="Not Available" class="text-danger">Not Available</option>
+        </optgroup>
+      </select>
+
+      <div class="text-danger mt-1" *ngIf="productForm.get('stock')?.touched && productForm.get('stock')?.invalid">
+        Stock information is required
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success px-4" [disabled]="productForm.invalid">Add Product</button>
+    </div>
+  </form>
+</div>

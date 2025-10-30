@@ -54,6 +54,7 @@ export class Updateprofile implements OnInit{
         next: () => {
           alert("profile updated");
           this.loadUserDetails()
+          
         }
           ,
         error: (err) => console.error('Error updating profile', err),

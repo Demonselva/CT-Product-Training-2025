@@ -32,7 +32,7 @@ namespace Bringova.Services
                 cmd.Parameters.AddWithValue("@Dob", request.dob ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Gender", request.gender ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@Mobile", request.mobile_number ?? (object)DBNull.Value);
-
+                        
                 conn.Open();
                 int rows = cmd.ExecuteNonQuery();
                 return rows > 0;

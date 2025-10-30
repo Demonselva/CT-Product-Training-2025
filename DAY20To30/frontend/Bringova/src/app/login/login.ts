@@ -28,6 +28,7 @@ export class Login {
         if (res && res.user.user_id) {
           
           localStorage.setItem('user', JSON.stringify(res.user));
+          alert("Login Success");
 
           this.router.navigate(['/main', res.user.user_id]);
         } else {

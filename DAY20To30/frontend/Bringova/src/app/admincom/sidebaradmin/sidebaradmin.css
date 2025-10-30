@@ -1,86 +1,62 @@
-.nav-brand {
-  color: rgb(255, 36, 73);
-  font-family: cursive;
-  font-size: 25px;
-  padding-top: 30px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 1px 4px rgba(255, 36, 73, 0.3);
+
+.nav-brand{
+            color: rgb(255, 36, 73); 
+           
+            font-family: cursive;
+            font-size: 25px;
+            padding-top:30px ;
+           
+            
+
+        }
+
+.sidebar{
+    width: 100%;
+    margin-left:10px ;
+    min-height: 100vh;
+
+}
+.bo-nav{
+    width: 100%;
+    
+}
+.bo-nav .anker-bo{
+    border-radius: 6px;
+    margin:0px 10px 4px 10px
 }
 
-.sidebar {
-  width: 100%;
-  margin-left: 10px;
-  min-height: 100vh;
-  background: linear-gradient(180deg, #ffffff, #fff5f7);
-  border-right: 2px solid rgba(255, 36, 73, 0.2);
-  box-shadow: 4px 0 15px rgba(255, 36, 73, 0.05);
-  border-radius: 10px 0 0 10px;
-  transition: all 0.3s ease;
+.bo-nav:hover{
+    border-left: 4px solid red;
+   
 }
-
-.bo-nav {
-  width: 100%;
-}
-
-.bo-nav .anker-bo {
-  border-radius: 6px;
-  margin: 0px 10px 4px 10px;
-  transition: all 0.3s ease;
-}
-
-.bo-nav:hover {
-  border-left: 4px solid rgb(255, 36, 73);
-}
-
 .anker-bo:hover {
-  background-color: rgba(255, 70, 79, 0.322);
-}
+ background-color: rgba(255, 70, 79, 0.322);
 
-.anker-bo a {
-  color: #9c9c9c;
-  font-weight: 600;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
 }
-
+.anker-bo a{
+    color:#9c9c9c;
+    font-weight: 600;
+}
 .anker-bo a:hover {
-  color: rgb(255, 40, 76);
+    color: rgb(255, 40, 76);
 }
-
-.nav-link i {
-  margin-right: 8px;
-  color: rgb(255, 40, 76);
+.Menu:hover{
+    background-color:rgba(255, 104, 106, 0.413);
+    color: white;
 }
+@media(max-width:568px) {
+    .sidebar{
+        min-height: fit-content;
+       font-weight: 700;
+        background-color: rgba(255, 208, 250, 0.498);
 
-
-
-.nav-link.active {
-  color: rgb(255, 40, 76);
-  background-color: rgba(255, 70, 79, 0.15);
-  border-left: 4px solid rgb(255, 36, 73);
-}
-
-/* Responsive */
-@media (max-width: 568px) {
-  .sidebar {
-    min-height: fit-content;
-    font-weight: 700;
-    background-color: rgba(255, 208, 250, 0.498);
-    border: none;
-    box-shadow: none;
-  }
-
-  .anker-bo a {
-    color: #5d5d5d;
+    }
+    .anker-bo a{
+    color:#5d5d5d;
     font-weight: 700;
     text-shadow: 0px 0px 10px pink;
-  }
 
-  .nav-brand {
-    font-size: 20px;
-    padding-top: 15px;
-  }
+}
+  
+    
 }

@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
 import { Demo } from './demo/demo';
 import { Updateprofile } from './updateprofile/updateprofile';
 import { Adminlogin } from './adminlogin/adminlogin';
+import { Userlist } from './admincom/userlist/userlist';
 
 export const routes: Routes = [
     {
@@ -55,6 +56,7 @@ export const routes: Routes = [
         children:[
             {path:'Addproduct',component:Addproducts},
             {path:'ProductList',component:Productlist},
+            {path:'userList',component:Userlist},
             
         ]
     },

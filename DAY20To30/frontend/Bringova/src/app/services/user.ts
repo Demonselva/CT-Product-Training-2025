@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { User } from '../Model/User';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,16 @@ export class UserService {
   updatePassword(id: number, data: any) {
     return this.http.put(`${this.apiUrl}/update-password/${id}`, data);
   }
-  getUserDetails(){
-    return this.http.get(`${this.apiUrl}/user`);
+  getUserDetails():Observable<User[]>{
+    return this.http.get<User[]>(`${this.apiUrl}`);
   }
+  deleteUserDetails(id:number){
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+  checkUserExists(email: string, username: string) {
+  return this.http.get<{ exists: boolean }>(
+    `${this.apiUrl}/check-user?email=${email}&username=${username}`
+  );
 }
+}
+

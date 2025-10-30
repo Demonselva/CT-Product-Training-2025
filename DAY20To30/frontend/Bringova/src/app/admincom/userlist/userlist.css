@@ -1,0 +1,60 @@
+.card {
+      
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+    .table {
+      color: #ddd;
+    }
+    .table thead {
+      background: #3a0ca3;
+      color: white;
+    }
+    .table tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
+    }
+    .btn-add {
+      background: linear-gradient(45deg, #3a0ca3, #7209b7);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-add:hover {
+      background: linear-gradient(45deg, #7209b7, #f72585);
+      transform: scale(1.05);
+    }
+    .action-btn {
+      border: none;
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+    .btn-edit {
+      background-color: #4895ef;
+      color: white;
+    }
+    .btn-edit:hover {
+      background-color: #4361ee;
+    }
+    .btn-delete {
+      background-color: #f72585;
+      color: white;
+    }
+    .btn-delete:hover {
+      background-color: #b5179e;
+    }
+    @media (max-width: 768px) {
+      .table-responsive {
+        font-size: 13px;
+      }
+      .header-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .header-buttons .btn-add {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }

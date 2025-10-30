@@ -2,6 +2,7 @@
 using Bringova.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 
 namespace Bringova.Controllers
 {
@@ -11,10 +12,12 @@ namespace Bringova.Controllers
     public class UserController : ControllerBase
     {
         private readonly AuthService _authService;
+        private readonly string _connectionString;
 
-        public UserController(AuthService authService)
+        public UserController(AuthService authService, IConfiguration _configuration)
         {
             _authService = authService;
+            _connectionString = _configuration.GetConnectionString("ShopDB");
         }
 
         [HttpPost("register")]
@@ -30,7 +33,7 @@ namespace Bringova.Controllers
             return BadRequest("Registration failed");
         }
 
-      
+
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
@@ -45,7 +48,7 @@ namespace Bringova.Controllers
             });
         }
 
-        
+
         [HttpGet]
         public IActionResult GetAllUsers()
         {
@@ -63,7 +66,7 @@ namespace Bringova.Controllers
             return Ok(user);
         }
 
-       
+
         [HttpPut("{id}")]
         public IActionResult UpdateUser(int id, [FromBody] User user)
         {
@@ -74,7 +77,7 @@ namespace Bringova.Controllers
             return BadRequest(new { message = "Update failed" });
         }
 
-        
+
         [HttpDelete("{id}")]
         public IActionResult DeleteUser(int id)
         {
@@ -95,5 +98,21 @@ namespace Bringova.Controllers
             return Ok(new { message = "Password updated successfully" });
         }
 
+
+        [HttpGet("check-user")]
+        public IActionResult CheckUser(string email, string username)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Users WHERE email = @Email OR username = @Username";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Username", username);
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar();
+
+                return Ok(new { exists = count > 0 });
+            }
+        }
     }
 }
