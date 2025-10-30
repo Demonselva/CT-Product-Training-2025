@@ -35,7 +35,6 @@ namespace Bringova.Services
             }
         }
 
-        // ✅ Get all products
         public List<Product> GetAllProducts()
         {
             List<Product> list = new List<Product>();
@@ -66,7 +65,7 @@ namespace Bringova.Services
             return list;
         }
 
-        // ✅ Get product by ID
+       
         public Product? GetProductById(int id)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))

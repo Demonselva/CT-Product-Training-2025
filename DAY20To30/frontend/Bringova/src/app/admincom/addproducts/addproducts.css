@@ -1,0 +1,20 @@
+.container {
+  max-width: 600px;
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #fdfdfd;
+  transition: transform 0.6 ease-in-out;
+}
+.card 
+
+
+.btn-success {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #43a047;
+}

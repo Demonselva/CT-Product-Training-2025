@@ -30,7 +30,7 @@ namespace Bringova.Controllers
             return BadRequest(new { message = "Failed to add product" });
         }
 
-        // ✅ GET: api/product
+    
         [HttpGet]
         public IActionResult GetAllProducts()
         {
@@ -38,7 +38,7 @@ namespace Bringova.Controllers
             return Ok(products);
         }
 
-        // ✅ GET: api/product/{id}
+        
         [HttpGet("{id}")]
         public IActionResult GetProductById(int id)
         {
@@ -49,7 +49,7 @@ namespace Bringova.Controllers
             return Ok(product);
         }
 
-        // ✅ PUT: api/product/{id}
+        
         [HttpPut("{id}")]
         public IActionResult UpdateProduct(int id, [FromBody] Product product)
         {
@@ -60,7 +60,6 @@ namespace Bringova.Controllers
             return BadRequest(new { message = "Failed to update product" });
         }
 
-        // ✅ DELETE: api/product/{id}
         [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
