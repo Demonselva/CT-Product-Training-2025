@@ -18,8 +18,8 @@ namespace Bringova.Services
         public bool AddOrder(Order order)
         {
             using SqlConnection con = new SqlConnection(_connectionString);
-            string query = @"INSERT INTO Orders (user_id, product_id, address, payment_method, payment_status, delivery_status, message, message_date)
-                             VALUES (@user_id, @product_id, @address, @payment_method, @payment_status, @delivery_status, @message, @message_date)";
+            string query = @"INSERT INTO Orders (user_id, product_id, address, payment_method, payment_status, delivery_status,total_price,quantity, message, message_date)
+                             VALUES (@user_id, @product_id, @address, @payment_method, @payment_status, @delivery_status,@Total_Price,@Quantity, @message, @message_date)";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@user_id", order.user_id);
             cmd.Parameters.AddWithValue("@product_id", order.product_id);
@@ -27,6 +27,8 @@ namespace Bringova.Services
             cmd.Parameters.AddWithValue("@payment_method", order.payment_method ?? (object)DBNull.Value);
             cmd.Parameters.AddWithValue("@payment_status", order.payment_status ?? (object)DBNull.Value);
             cmd.Parameters.AddWithValue("@delivery_status", order.delivery_status ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Total_Price", order.Total_Price ?? (object)DBNull.Value);
+            cmd.Parameters.AddWithValue("@Quantity", order.Quantity ?? (object)DBNull.Value);
             cmd.Parameters.AddWithValue("@message", order.message ?? (object)DBNull.Value);
             cmd.Parameters.AddWithValue("@message_date", order.message_date ?? DateTime.Now);
 
@@ -61,6 +63,8 @@ namespace Bringova.Services
                     payment_method = reader["payment_method"].ToString(),
                     payment_status = reader["payment_status"].ToString(),
                     delivery_status = reader["delivery_status"].ToString(),
+                    Total_Price = Convert.ToInt32(reader["total_price"]),
+                    Quantity = Convert.ToInt32(reader["quantity"]),
                     message = reader["message"].ToString(),
                     message_date = reader["message_date"] as DateTime?,
                     order_date = reader["order_date"] as DateTime?,
@@ -107,6 +111,8 @@ namespace Bringova.Services
                     payment_method = reader["payment_method"].ToString(),
                     payment_status = reader["payment_status"].ToString(),
                     delivery_status = reader["delivery_status"].ToString(),
+                    Total_Price = Convert.ToInt32(reader["total_price"]),
+                    Quantity = Convert.ToInt32(reader["quantity"]),
                     message = reader["message"].ToString(),
                     message_date = reader["message_date"] as DateTime?,
                     order_date = reader["order_date"] as DateTime?,
@@ -136,5 +142,36 @@ namespace Bringova.Services
             int rows = cmd.ExecuteNonQuery();
             return rows > 0;
         }
+        public bool UpdateOrder(Order order)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                string query = @"UPDATE Orders 
+                         SET user_id = @UserId,
+                             product_id = @ProductId,
+                             address = @Address,
+                             payment_method = @PaymentMethod,
+                             payment_status = @PaymentStatus,
+                             quantity = @Quantity,
+                             total_price = @TotalPrice
+                         WHERE order_id = @OrderId";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@OrderId", order.order_id);
+                cmd.Parameters.AddWithValue("@UserId", order.user_id);
+                cmd.Parameters.AddWithValue("@ProductId", order.product_id);
+                cmd.Parameters.AddWithValue("@Address", order.address);
+                cmd.Parameters.AddWithValue("@PaymentMethod", order.payment_method);
+                cmd.Parameters.AddWithValue("@PaymentStatus", order.payment_status);
+                cmd.Parameters.AddWithValue("@Quantity", order.Quantity);
+                cmd.Parameters.AddWithValue("@TotalPrice", order.Total_Price);
+
+                conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
+
     }
 }

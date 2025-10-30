@@ -1,69 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\",
+  "WorkspaceRootPath": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\passwordupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\passwordupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\passwordupdaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|d:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|g:\\ct-product-training-2025\\day20to30\\backend\\bringova\\bringova\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6C2E1D8-5C4D-4CD9-AED7-91F17F2A9611}|Bringova\\Bringova.csproj|solutionrelative:bringova\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,167 +82,88 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Bringova\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Bringova\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:49:54.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Bringova\\Model\\User.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\User.cs",
-              "RelativeToolTip": "Bringova\\Model\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T05:07:28.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\ProductService.cs",
-              "RelativeDocumentMoniker": "Bringova\\Services\\ProductService.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\ProductService.cs",
-              "RelativeToolTip": "Bringova\\Services\\ProductService.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAowG4AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T06:36:02.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\OrderController.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Bringova\\Controllers\\OrderController.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\OrderController.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Bringova\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wBgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T07:02:03.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Order.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Order.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Order.cs",
               "RelativeDocumentMoniker": "Bringova\\Model\\Order.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Order.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Order.cs",
               "RelativeToolTip": "Bringova\\Model\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T06:58:35.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "OrderService.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\OrderService.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Bringova\\Services\\OrderService.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\OrderService.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\OrderService.cs",
               "RelativeToolTip": "Bringova\\Services\\OrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T06:59:36.037Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Program.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Program.cs",
               "RelativeDocumentMoniker": "Bringova\\Program.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Program.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Program.cs",
               "RelativeToolTip": "Bringova\\Program.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAQwAwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T01:47:38.779Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T01:47:38.779Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\AuthService.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Bringova\\Services\\AuthService.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\AuthService.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\AuthService.cs",
               "RelativeToolTip": "Bringova\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAtwFIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T05:43:04.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\UserController.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Bringova\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\UserController.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\UserController.cs",
               "RelativeToolTip": "Bringova\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAAAG8AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAqwGkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T04:59:15.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Bringova\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Bringova\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T06:37:33.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginRequest.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\LoginRequest.cs",
-              "RelativeDocumentMoniker": "Bringova\\Model\\LoginRequest.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\LoginRequest.cs",
-              "RelativeToolTip": "Bringova\\Model\\LoginRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T05:40:59.331Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\appsettings.json",
-              "RelativeDocumentMoniker": "Bringova\\appsettings.json",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\appsettings.json",
-              "RelativeToolTip": "Bringova\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-29T05:31:46.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "DemoController.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\DemoController.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\DemoController.cs",
               "RelativeDocumentMoniker": "Bringova\\Controllers\\DemoController.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\DemoController.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\DemoController.cs",
               "RelativeToolTip": "Bringova\\Controllers\\DemoController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -251,24 +172,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Bringova\\Model\\RegisterRequest.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\RegisterRequest.cs",
-              "RelativeToolTip": "Bringova\\Model\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T05:40:37.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "PasswordUpdateRequest.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\PasswordUpdateRequest.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\PasswordUpdateRequest.cs",
               "RelativeDocumentMoniker": "Bringova\\Model\\PasswordUpdateRequest.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\PasswordUpdateRequest.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\PasswordUpdateRequest.cs",
               "RelativeToolTip": "Bringova\\Model\\PasswordUpdateRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -277,16 +185,101 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Bringova\\Services\\ProductService.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\ProductService.cs",
+              "RelativeToolTip": "Bringova\\Services\\ProductService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowG4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T06:36:02.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\appsettings.json",
+              "RelativeDocumentMoniker": "Bringova\\appsettings.json",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\appsettings.json",
+              "RelativeToolTip": "Bringova\\appsettings.json",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-29T05:31:46.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Bringova\\Model\\User.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\User.cs",
+              "RelativeToolTip": "Bringova\\Model\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:07:28.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Bringova\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Bringova\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA6wBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T17:49:54.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Bringova\\Controllers\\ProductController.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Bringova\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T06:37:33.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "Bringova\\Model\\LoginRequest.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\LoginRequest.cs",
+              "RelativeToolTip": "Bringova\\Model\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:40:59.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "Bringova\\Model\\RegisterRequest.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\RegisterRequest.cs",
+              "RelativeToolTip": "Bringova\\Model\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T05:40:37.208Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Product.cs",
-              "DocumentMoniker": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Product.cs",
+              "DocumentMoniker": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Product.cs",
               "RelativeDocumentMoniker": "Bringova\\Model\\Product.cs",
-              "ToolTip": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Product.cs",
+              "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Model\\Product.cs",
               "RelativeToolTip": "Bringova\\Model\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T06:33:51.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T06:33:51.372Z"
             }
           ]
         }

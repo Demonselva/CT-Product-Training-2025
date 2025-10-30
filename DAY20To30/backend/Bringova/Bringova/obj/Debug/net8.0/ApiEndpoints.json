@@ -111,6 +111,22 @@
   },
   {
     "ContainingType": "Bringova.Controllers.OrderController",
+    "Method": "UpdateOrder",
+    "RelativePath": "api/Order/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Bringova.Models.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Bringova.Controllers.OrderController",
     "Method": "GetOrdersByUser",
     "RelativePath": "api/Order/user/{userId}",
     "HttpMethod": "GET",

@@ -28,7 +28,17 @@ namespace Bringova.Controllers
             return BadRequest(new { message = "Failed to place order" });
         }
 
-      
+        [HttpPut("update")]
+        public IActionResult UpdateOrder([FromBody] Order order)
+        {
+            bool success = _orderService.UpdateOrder(order);
+            if (success)
+                return Ok(new { message = "Order updated successfully" });
+
+            return BadRequest(new { message = "Failed to update order" });
+        }
+
+
         [HttpGet]
         public IActionResult GetAllOrders()
         {
