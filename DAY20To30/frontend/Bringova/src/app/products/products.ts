@@ -47,13 +47,17 @@ export class Products {
   initializeForm(){
     this.orderForm = this.fb.group({
       user_id: [this.userId],
-        product_id: [null, Validators.required],  
-      productName: ['', Validators.required],
-      customerName: [this.userData.username, Validators.required],
-      quantity: [1, [Validators.required, Validators.min(1)]],
-      address: ['', Validators.required],
-      totalPrice: ['', Validators.required],
-      paymentMethod: ['', Validators.required]
+  product_id: ['', Validators.required],
+  product_name: ['', Validators.required],
+  customerName: [this.userData.username, Validators.required],
+  quantity: [1, [Validators.required, Validators.min(1)]],
+  address: ['', Validators.required],
+  total_price: ['', Validators.required],     
+  payment_method: ['', Validators.required],   
+  payment_status: [''],                       
+  delivery_status: ['Pending'],                
+  message: [''],                               
+  message_date: [new Date()]     
     });
   }
   loadProducts(){
@@ -80,11 +84,12 @@ export class Products {
 
   openOrderForm(product: any) {
     this.orderForm.patchValue({
-      payment_method:product.payment_method,
       product_id: product.product_id, 
-      productName: product. product_name,
-      totalPrice: product.price
+      product_name: product. product_name,
+      total_price: product.offer_price??product.price,
+      delivery_status:'Pending',
     });
+    this.selectedProduct=product;
     this.showOrderForm = true;
   }
 
@@ -95,6 +100,15 @@ export class Products {
    placeOrder() {
     if (this.orderForm.valid) {
       const orderData = this.orderForm.value;
+      if (orderData) {
+  const quantity = this.orderForm.get('quantity')?.value || 1;
+  const total_price = this.orderForm.get('totalPrice')?.value || 1;
+
+ orderData.total_price=total_price*quantity;
+}
+
+     if (orderData.payment_method === 'COD') { orderData.payment_status = 'Not Paid'; } else { orderData.payment_status = 'Paid'; }
+
       console.log('Sending order:', orderData); 
       this.orderService.addOrders(orderData).subscribe({
         next: (res) => {
@@ -104,6 +118,7 @@ export class Products {
         error: (err) => {
           console.error('Error placing order:', err);
           alert('❌ Failed to place order.');
+          this.closeOrderForm()
         }
       });
     } else {
@@ -112,14 +127,7 @@ export class Products {
   }
 
 
-openOrderModal(product: any) {
-  this.orderForm.patchValue({
-    productName: product.name,
-  });
-  const modal = document.getElementById('orderModal');
-  modal?.classList.add('show');
-  modal?.setAttribute('style', 'display: block;');
-}
+
 
 
 }

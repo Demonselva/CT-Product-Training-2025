@@ -136,29 +136,19 @@
 
     <div class="modal-body">
       <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
-       
 
+        <!-- 🔹 Product -->
         <div class="mb-3">
           <label class="form-label">Product Name</label>
           <input
             type="text"
             class="form-control"
-            formControlName="productName"
+            formControlName="product_name"
             readonly
           />
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Customer Name</label>
-          <input
-            type="text"
-            class="form-control"
-            formControlName="customerName"
-            placeholder="Enter customer name"
-            readonly
-          />
-        </div>
-
+        <!-- 🔹 Quantity -->
         <div class="mb-3">
           <label class="form-label">Quantity</label>
           <input
@@ -170,8 +160,9 @@
           />
         </div>
 
+        <!-- 🔹 Address -->
         <div class="mb-3">
-          <label class="form-label">Address</label>
+          <label class="form-label">Delivery Address</label>
           <textarea
             class="form-control"
             formControlName="address"
@@ -180,26 +171,38 @@
           ></textarea>
         </div>
 
+        <!-- 🔹 Total Price -->
         <div class="mb-3">
           <label class="form-label">Total Price</label>
           <input
             type="number"
             class="form-control"
-            formControlName="totalPrice"
-            placeholder="Enter total price"
+            formControlName="total_price"
+            readonly
           />
         </div>
 
+        <!-- 🔹 Payment Method -->
         <div class="mb-3">
           <label class="form-label">Payment Method</label>
-          <select class="form-select" formControlName="paymentMethod">
+          <select class="form-select" formControlName="payment_method">
             <option value="">Select Payment Method</option>
-            <option value="Cash on Delivery">Cash on Delivery</option>
-            <option value="Credit Card">Credit Card</option>
-            <option value="Debit Card">Debit Card</option>
+            <option value="COD">Cash on Delivery</option>
+            <option value="Card">Card</option>
             <option value="UPI">UPI</option>
-            <option value="Net Banking">Net Banking</option>
+            <option value="NetBanking">Net Banking</option>
           </select>
+        </div>
+
+        <!-- 🔹 Optional Message -->
+        <div class="mb-3">
+          <label class="form-label">Message (Optional)</label>
+          <textarea
+            class="form-control"
+            formControlName="message"
+            rows="2"
+            placeholder="Add a note for the seller"
+          ></textarea>
         </div>
 
         <div class="text-center">

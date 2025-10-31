@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "Bringova\\Controllers\\OrderController.cs",
               "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Bringova\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T07:02:03.605Z",
               "EditorCaption": ""
@@ -103,8 +103,7 @@
               "RelativeToolTip": "Bringova\\Model\\Order.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T06:58:35.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T06:58:35.849Z"
             },
             {
               "$type": "Document",
@@ -114,7 +113,7 @@
               "RelativeDocumentMoniker": "Bringova\\Services\\OrderService.cs",
               "ToolTip": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Services\\OrderService.cs",
               "RelativeToolTip": "Bringova\\Services\\OrderService.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAnwCMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T06:59:36.037Z",
               "EditorCaption": ""
@@ -141,8 +140,7 @@
               "RelativeToolTip": "Bringova\\Services\\AuthService.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAtwFIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T05:43:04.316Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T05:43:04.316Z"
             },
             {
               "$type": "Document",
@@ -154,8 +152,7 @@
               "RelativeToolTip": "Bringova\\Controllers\\UserController.cs",
               "ViewState": "AgIAAFMAAAAAAAAAAAAqwGkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T04:59:15.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T04:59:15.594Z"
             },
             {
               "$type": "Document",
@@ -167,8 +164,7 @@
               "RelativeToolTip": "Bringova\\Controllers\\DemoController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwA4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T01:57:16.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T01:57:16.985Z"
             },
             {
               "$type": "Document",
@@ -180,8 +176,7 @@
               "RelativeToolTip": "Bringova\\Model\\PasswordUpdateRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T12:46:11.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T12:46:11.74Z"
             },
             {
               "$type": "Document",
@@ -205,8 +200,7 @@
               "RelativeToolTip": "Bringova\\appsettings.json",
               "ViewState": "AgIAABEAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-29T05:31:46.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-29T05:31:46.089Z"
             },
             {
               "$type": "Document",
