@@ -1,1 +1,147 @@
-<p>order-history works!</p>
+<div class="sec-main">
+    <div class="sec2">
+        <div class="recent-orders d-flex justify-content-between align-items-center mb-3">
+            <h6 class="fw-bold">Orders</h6>
+            <select class="form-select w-auto">
+                <option>Recent Orders</option>
+                <option>Pending</option>
+                <option>Dispatched</option>
+            </select>
+        </div>
+
+        <div class="table-responsive shadow-sm rounded-4">
+            <table class="table align-middle">
+                <thead class="table-light text-center">
+                    <tr>
+                        <th>ID</th>
+                        <th>Product</th>
+                        <th>Product Name</th>
+                        <th>Payment</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Total Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                @if(orders.length > 0){
+                <tbody>
+                    <tr *ngFor="let order of orders" class="align-middle text-center">
+                        <td>#{{ order.order_id }}</td>
+                        <td>{{ order.product_id }}</td>
+                        <td>{{ order.product.product_name || 'You' }}</td>
+                        <td>
+                            <span class="badge" [ngClass]="{
+                  'bg-success text-white': order.payment_status === 'Paid',
+                  'bg-danger text-white': order.payment_status === 'Not Paid',
+    
+                }">
+                                {{order.payment_status}}
+                            </span>
+                        </td>
+
+                        <td>{{ order.quantity }}</td>
+                        <td>
+                            <span class="badge" [ngClass]="{
+                  'bg-warning text-dark': order.delivery_status === 'Pending',
+                  'bg-success': order.delivery_status === 'Delivered',
+                  'bg-info text-dark': order.delivery_status === 'On The Way'
+                }">
+                                {{ order.delivery_status }}
+                            </span>
+                        </td>
+                        <td>₹{{ order.total_Price }}</td>
+                        <td>
+                            @if (order.delivery_status === "Pending" || order.delivery_status === "On The Way" ) {
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Actions
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item text-danger"
+                                            (click)="cancelOrder(order.order_id)">Cancel Order</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" (click)="messageSeller(order)">Message</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            } @else {
+                            <button class="btn btn-outline-danger btn-sm" (click)="cancelOrder(order.order_id)">
+                                Delete
+                            </button>
+                            }
+                        </td>
+
+                    </tr>
+                </tbody>
+                }
+                @else {
+
+                <tr>
+                    <td colspan="8" class="text-center text-muted py-4">
+                        No orders found.
+                    </td>
+                </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+@if(showMessageModal){
+<div class="custom-modal">
+    <div class="custom-modal-content">
+        <h5>Update Order Details</h5>
+
+        <form [formGroup]="orderForm" (ngSubmit)="updateOrderDetails()">
+
+            <div class="mb-2">
+                <label>Address</label>
+                <input formControlName="address" class="form-control" type="text" />
+            </div>
+
+            <div class="mb-2">
+                <input formControlName="payment_method" class="form-control" type="text" hidden />
+            </div>
+
+            <div class="mb-2">
+                <select formControlName="payment_status" class="form-select" hidden>
+                    <option value="Not Paid">Not Paid</option>
+                    <option value="Paid">Paid</option>
+
+                </select>
+            </div>
+
+            <div class="mb-2">
+
+                <select formControlName="delivery_status" class="form-select" hidden>
+                    <option value="Pending">Pending</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+            </div>
+
+            <div class="mb-2">
+                <!-- <label>Quantity</label> -->
+                <input formControlName="quantity" class="form-control" type="number" hidden />
+            </div>
+
+            <div class="mb-2">
+                <label>Total Price</label>
+                <input formControlName="total_Price" class="form-control" type="number" readonly />
+            </div>
+
+            <div class="mb-2">
+                <label>Message to Seller</label>
+                <textarea formControlName="message" class="form-control" placeholder="Type message"></textarea>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-secondary" (click)="closeMessageModal()">Close</button>
+            </div>
+        </form>
+    </div>
+</div>
+}

@@ -1,2 +1,47 @@
-<p>message works!</p>
-lorem3000
+<div class="container py-4">
+  <h4 class="text-center mb-4 fw-bold text-primary">
+    📩 Messages to Sellers
+  </h4>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="table-responsive shadow-lg rounded-3 bg-light">
+        <table class="table table-hover align-middle text-center mb-0 ">
+          <thead >
+            <tr>
+              <th>Order ID</th>
+              <th>Message</th>
+              <th>Message Date</th>
+        
+            </tr>
+          </thead>
+
+          <tbody>
+            @for(msg of messages;track $index){
+            <tr>
+              <td>
+                <span class="fw-semibold text-primary">#{{ msg.order_id }}</span>
+              </td>
+
+              <td class="text-wrap text-secondary">
+                {{ msg.message }}
+              </td>
+
+              <td>
+                <span class="badge bg-info text-dark px-3 py-2 rounded-pill shadow-sm">
+                  {{ msg.message_date | date: 'medium' }}
+                </span>
+              </td>
+
+             
+            </tr>
+        }
+          </tbody>
+        </table>
+      </div>
+    
+
+      
+    </div>
+  </div>
+</div>

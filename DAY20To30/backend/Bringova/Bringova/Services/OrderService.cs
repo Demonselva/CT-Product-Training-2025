@@ -152,6 +152,7 @@ namespace Bringova.Services
                              address = @Address,
                              payment_method = @PaymentMethod,
                              payment_status = @PaymentStatus,
+                             message=@message,
                              quantity = @Quantity,
                              total_price = @TotalPrice
                          WHERE order_id = @OrderId";
@@ -163,6 +164,7 @@ namespace Bringova.Services
                 cmd.Parameters.AddWithValue("@Address", order.address);
                 cmd.Parameters.AddWithValue("@PaymentMethod", order.payment_method);
                 cmd.Parameters.AddWithValue("@PaymentStatus", order.payment_status);
+                cmd.Parameters.AddWithValue("@message", order.message);
                 cmd.Parameters.AddWithValue("@Quantity", order.Quantity);
                 cmd.Parameters.AddWithValue("@TotalPrice", order.Total_Price);
 

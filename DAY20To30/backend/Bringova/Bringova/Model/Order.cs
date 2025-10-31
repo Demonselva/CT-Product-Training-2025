@@ -11,7 +11,7 @@ namespace Bringova.Models
         public string? payment_method { get; set; }
         public string? payment_status { get; set; }
         public string? delivery_status { get; set; }
-        public int? Total_Price { get; set; }
+        public double? Total_Price { get; set; }
         public int? Quantity { get; set; }
         public string? message { get; set; }
         public DateTime? message_date { get; set; }

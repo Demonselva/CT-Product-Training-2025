@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj": {}
+    "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj": {}
   },
   "projects": {
-    "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj": {
+    "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj",
+        "projectUniqueName": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj",
         "projectName": "Bringova",
-        "projectPath": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj",
-        "packagesPath": "C:\\Users\\selva\\.nuget\\packages\\",
-        "outputPath": "G:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\obj\\",
+        "projectPath": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\Bringova.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\CT-Product-Training-2025\\DAY20To30\\backend\\Bringova\\Bringova\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\selva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -670,8 +670,8 @@
             "nullable": true
           },
           "total_Price": {
-            "type": "integer",
-            "format": "int32",
+            "type": "number",
+            "format": "double",
             "nullable": true
           },
           "quantity": {

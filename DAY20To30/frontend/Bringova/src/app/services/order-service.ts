@@ -13,6 +13,17 @@ export class OrderService {
 addOrders(order: Orders): Observable<any> {
   return this.http.post(`${this.apiurl}/add`, order);
 }
+getOrdersByUserId(userId: number) {
+  return this.http.get<any[]>(`${this.apiurl}/user/${userId}`);
+}
+
+cancelOrder(orderId: number) {
+  return this.http.delete(`${this.apiurl}/${orderId}`);
+}
+updateOrder(order : Orders):Observable<any>{
+  return this.http.put(`${this.apiurl}/update`,order);
+}
+
 
   
 }

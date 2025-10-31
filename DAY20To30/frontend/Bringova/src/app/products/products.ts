@@ -6,9 +6,7 @@ import { Product } from '../Model/Product';
 import { UserService } from '../services/user';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../services/order-service';
-// ALTER TABLE Orders
-// ADD total_price DECIMAL(10,2),
-//     quantity INT;
+
 
 
 @Component({
@@ -95,16 +93,17 @@ export class Products {
 
   closeOrderForm() {
     this.showOrderForm = false;
+    this.closeDetails()
   }
 
    placeOrder() {
     if (this.orderForm.valid) {
       const orderData = this.orderForm.value;
       if (orderData) {
-  const quantity = this.orderForm.get('quantity')?.value || 1;
-  const total_price = this.orderForm.get('totalPrice')?.value || 1;
+  const Quantity = this.orderForm.get('quantity')?.value || 1;
+  const total_price = this.orderForm.get('total_price')?.value || 1;
 
- orderData.total_price=total_price*quantity;
+ orderData.Total_Price=total_price*Quantity;
 }
 
      if (orderData.payment_method === 'COD') { orderData.payment_status = 'Not Paid'; } else { orderData.payment_status = 'Paid'; }

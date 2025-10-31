@@ -25,11 +25,13 @@
 }
 .custom-modal-content {
   background: #fff;
-  width: 90%;
+  width: 80%;
   max-width: 600px;
+  height: 80%;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   animation: slideUp 0.3s ease-in-out;
+  overflow-y: auto;
 }
 .modal-header {
   display: flex;
@@ -46,6 +48,9 @@
 .card-no{
   
     border: 1px dotted red;
+}
+.Available{
+  color: rgb(255, 65, 103);
 }
 @keyframes slideUp {
   from {

@@ -1,1 +1,219 @@
-<p>stock works!</p>
+<div class="container py-4">
+   <h2 class="text-center fw-bold text-white bg-success bg-gradient p-3 rounded shadow-sm">
+    🔥 Available 🔥
+  </h2>
+
+  <div class="row g-4">
+    @for (product of products; track $index) {
+      <div class="col-md-4 col-sm-6">
+         @if(product?.stock=="Available"){
+             
+        <div class="card border-0 border-pink  rounded-4 product-card h-100">
+          <!-- <img
+            [src]="product.image"
+            class="card-img-top rounded-top-4"
+            alt="{{ product.product_name }}"
+          /> -->
+          <div class="card-body text-center">
+            <h5 class="fw-bold">{{ product.product_name }}</h5>
+
+            @if (product.offer_price) {
+              <p>
+                <span class="text-muted text-decoration-line-through me-2">
+                  ₹{{ product.price }}
+                </span>
+                <span class="text-success fw-bold">₹{{ product.offer_price }}</span>
+              </p>
+            } @else {
+              <p class="text-dark fw-bold">₹{{ product.price }}</p>
+            }
+
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <button
+                class="btn btn-outline-info btn-sm rounded-pill"
+                (click)="openDetails(product)"
+              >
+                <i class="fa fa-info-circle me-1"></i> Details
+              </button>
+
+              <button
+                class="btn btn-primary btn-sm rounded-pill"
+                (click)="openOrderForm(product)"
+              >
+                <i class="fa fa-shopping-cart me-1"></i> Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+    }   @else{
+                 <div class="card border-2 shadow-sm rounded-4 product-card h-100 card-no">
+          <!-- <img
+            [src]="product.image"
+            class="card-img-top rounded-top-4"
+            alt="{{ product.product_name }}"
+          /> -->
+          <div class="card-body text-center">
+            <h5 class="fw-bold">{{ product.product_name }}</h5>
+
+            @if (product.offer_price) {
+              <p>
+                <span class="text-muted text-decoration-line-through me-2">
+                  ₹{{ product.price }}
+                </span>
+                <span class="text-success fw-bold">₹{{ product.offer_price }}</span>
+              </p>
+            } @else {
+              <p class="text-dark fw-bold">₹{{ product.price }}</p>
+            }
+
+            <div class="d-flex justify-content-center gap-2 mt-2">
+              <button
+                class="btn btn-outline-info btn-sm rounded-pill"
+                (click)="openDetails(product)"
+              >
+                <i class="fa fa-info-circle me-1"></i> Details
+              </button>
+
+             
+            </div>
+          </div>
+        </div>
+
+            }
+      </div>
+    }
+  </div>
+</div>
+
+
+@if (showDetails) {
+  <div class="custom-modal">
+    <div class="custom-modal-content rounded-4">
+      <div class="modal-header bg-info text-white rounded-top-4">
+        <h5 class="modal-title fw-bold">{{ selectedProduct?.product_name }}</h5>
+        <button class="btn-close btn-close-white" (click)="closeDetails()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <h1>{{selectedProduct?.product_name}}</h1>
+            @if(selectedProduct?.stock=="Available"){
+                <span><p class="text-success">{{selectedProduct?.stock}}</p></span>
+            }@else{
+                 <span><p class="text-danger">{{selectedProduct?.stock}}</p></span>
+
+            }
+            <!-- <img
+              [src]="selectedProduct?.image"
+              alt="Product"
+              class="img-fluid rounded mb-3"
+            /> -->
+          </div>
+          <div class="col-md-6">
+            <p class="text-primary">{{ selectedProduct?.product_description }}</p>
+            <h6 class="text-primary">
+              @if (selectedProduct?.offer_price) {
+               <span class="text-muted"> Prices :</span>
+                
+                ₹{{ selectedProduct?.offer_price }}
+              } @else {
+                ₹{{ selectedProduct?.price }}
+              }
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
+
+@if (showOrderForm) {
+ <div class="custom-modal">
+  <div class="custom-modal-content rounded-4">
+    <div class="modal-header bg-primary text-white rounded-top-4">
+      <h5 class="modal-title">Place New Order</h5>
+      <button class="btn-close btn-close-white" (click)="closeOrderForm()"></button>
+    </div>
+
+    <div class="modal-body">
+      <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
+
+       
+        <div class="mb-3">
+          <label class="form-label">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="product_name"
+            readonly
+          />
+        </div>
+
+      
+        <div class="mb-3">
+          <label class="form-label">Quantity</label>
+          <input
+            type="number"
+            class="form-control"
+            formControlName="quantity"
+            min="1"
+            placeholder="Enter quantity"
+          />
+        </div>
+
+      
+        <div class="mb-3">
+          <label class="form-label">Delivery Address</label>
+          <textarea
+            class="form-control"
+            formControlName="address"
+            rows="2"
+            placeholder="Enter delivery address"
+          ></textarea>
+        </div>
+
+      
+        <div class="mb-3">
+          <label class="form-label">Total Price</label>
+          <input
+            type="number"
+            class="form-control"
+            formControlName="total_price"
+            readonly
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Payment Method</label>
+          <select class="form-select" formControlName="payment_method">
+            <option value="">Select Payment Method</option>
+            <option value="COD">Cash on Delivery</option>
+            <option value="Card">Card</option>
+            <option value="UPI">UPI</option>
+            <option value="NetBanking">Net Banking</option>
+          </select>
+        </div>
+
+    
+        <div class="mb-3">
+          <label class="form-label">Message (Optional)</label>
+          <textarea
+            class="form-control"
+            formControlName="message"
+            rows="2"
+            placeholder="Add a note for the seller"
+          ></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-success rounded-pill px-4">
+            Confirm Order
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+}
