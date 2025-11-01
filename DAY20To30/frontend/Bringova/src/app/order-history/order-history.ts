@@ -87,6 +87,7 @@ export class OrderHistory {
     address: this.orderForm.value.address,
     payment_method: this.orderForm.value.payment_method,
     payment_status: this.orderForm.value.payment_status,
+    delivery_status: this.orderForm.value.delivery_status,
     total_price: this.orderForm.value.total_Price,
     quantity: this.orderForm.value.quantity,
     message: this.orderForm.value.message,

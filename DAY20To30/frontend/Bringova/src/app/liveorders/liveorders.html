@@ -47,6 +47,7 @@
                         <th>Product</th>
                         <th>Product Name</th>
                         <th>Payment</th>
+                        <th>Address</th>
                         <th>Quantity</th>
                         <th>Status</th>
                         <th>Total Price</th>
@@ -68,13 +69,14 @@
                                 {{order.payment_status}}
                             </span>
                         </td>
+                        <td>{{order.address}}</td>
                         
                         <td>{{ order.quantity }}</td>
                         <td>
                             <span class="badge" [ngClass]="{
                   'bg-warning text-dark': order.delivery_status === 'Pending',
                   'bg-success': order.delivery_status === 'Delivered',
-                  'bg-info text-dark': order.delivery_status === 'On The Way'
+                  'bg-info text-dark': order.delivery_status === 'On the Way'
                 }">
                                 {{ order.delivery_status }}
                             </span>
@@ -117,7 +119,7 @@
 
       <div class="mb-2">
         <label>Address</label>
-        <input formControlName="address" class="form-control" type="text" />
+        <input formControlName="address" class="form-control" type="text"  />
       </div>
 
       <div class="mb-2">
@@ -137,6 +139,7 @@
         <select formControlName="delivery_status" class="form-select" hidden>
           <option value="Pending">Pending</option>
           <option value="Delivered">Delivered</option>
+          <option value="On the Way">On the Way</option>
         </select>
       </div>
 
@@ -156,7 +159,7 @@
       </div>
 
       <div class="d-flex justify-content-end gap-2">
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit"   [disabled]="orderForm.invalid" class="btn btn-primary">Update</button>
         <button type="button" class="btn btn-secondary" (click)="closeMessageModal()">Close</button>
       </div>
     </form>

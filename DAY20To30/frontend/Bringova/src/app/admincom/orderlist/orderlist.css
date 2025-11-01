@@ -1,0 +1,41 @@
+.sec-main {
+  padding: 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.table {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+.dropdown-menu {
+  min-width: 150px;
+}
+.custom-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  margin: 10px;
+}
+
+.custom-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 420px;
+}
+.action .dropdown-item:hover{
+    background-color:rgba(255, 34, 78, 0.266);
+    font-style: italic;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -17,6 +17,7 @@
                         <th>Product</th>
                         <th>Product Name</th>
                         <th>Payment</th>
+                        <th>Address</th>
                         <th>Quantity</th>
                         <th>Status</th>
                         <th>Total Price</th>
@@ -38,13 +39,14 @@
                                 {{order.payment_status}}
                             </span>
                         </td>
+                        <td>{{order.address}}</td>
 
                         <td>{{ order.quantity }}</td>
                         <td>
                             <span class="badge" [ngClass]="{
                   'bg-warning text-dark': order.delivery_status === 'Pending',
                   'bg-success': order.delivery_status === 'Delivered',
-                  'bg-info text-dark': order.delivery_status === 'On The Way'
+                  'bg-info text-dark': order.delivery_status === 'On the Way'
                 }">
                                 {{ order.delivery_status }}
                             </span>

@@ -16,6 +16,7 @@ import { Demo } from './demo/demo';
 import { Updateprofile } from './updateprofile/updateprofile';
 import { Adminlogin } from './adminlogin/adminlogin';
 import { Userlist } from './admincom/userlist/userlist';
+import { Orderlist } from './admincom/orderlist/orderlist';
 
 export const routes: Routes = [
     {
@@ -40,6 +41,9 @@ export const routes: Routes = [
         path:'main/:id',
         component:Mainlayout,
         children:[
+            { path:'',
+        redirectTo:'liveOrders',
+        pathMatch:'full'},
             {path:'liveOrders',component:Liveorders},
             {path:'orderHistory',component:OrderHistory},
             {path:'stock',component:Stock},
@@ -57,6 +61,7 @@ export const routes: Routes = [
             {path:'Addproduct',component:Addproducts},
             {path:'ProductList',component:Productlist},
             {path:'userList',component:Userlist},
+            {path:'orderlist',component:Orderlist}
             
         ]
     },

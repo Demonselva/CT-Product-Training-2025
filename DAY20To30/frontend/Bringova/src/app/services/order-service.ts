@@ -9,6 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class OrderService {
   apiurl='https://localhost:7296/api/Order'
   constructor(private http :HttpClient){}
+getOrders(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.apiurl}`);
+}
 
 addOrders(order: Orders): Observable<any> {
   return this.http.post(`${this.apiurl}/add`, order);

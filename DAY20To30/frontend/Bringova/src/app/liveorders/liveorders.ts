@@ -56,7 +56,7 @@ orders: any[] = [];
  calculateStats(): void {
     this.totalOrders = this.totalorderslist.length;
     this.totalPending =this.totalorderslist.filter(o => o.delivery_status === 'Pending').length;
-    this.totalDispatch = this.totalorderslist.filter(o => o.delivery_status === 'On The Way').length;
+    this.totalDispatch = this.totalorderslist.filter(o => o.delivery_status === 'On the Way' ).length;
   }
 
   cancelOrder(orderId: number): void {
@@ -90,23 +90,24 @@ orders: any[] = [];
     address: this.orderForm.value.address,
     payment_method: this.orderForm.value.payment_method,
     payment_status: this.orderForm.value.payment_status,
+    delivery_status:this.orderForm.value.delivery_status,
     total_price: this.orderForm.value.total_Price,
     quantity: this.orderForm.value.quantity,
     message: this.orderForm.value.message,
   };
 
-  // this.orderService.updateOrder(updatedOrder)
-  //   .subscribe({
-  //     next: (res: any) => {
-  //       alert('Order updated successfully!');
-  //       this.loadOrders()
-  //       this.showMessageModal = false;
-  //     },
-  //     error: (err) => {
-  //       console.error(err);
-  //       alert('Failed to update order. Check console for details.');
-  //     }
-  //   });
+  this.orderService.updateOrder(updatedOrder)
+    .subscribe({
+      next: (res: any) => {
+        alert('Order updated successfully!');
+        this.loadOrders()
+        this.showMessageModal = false;
+      },
+      error: (err) => {
+        console.error(err);
+        alert('Failed to update order. Check console for details.');
+      }
+    });
 }
 
   closeMessageModal(): void {
