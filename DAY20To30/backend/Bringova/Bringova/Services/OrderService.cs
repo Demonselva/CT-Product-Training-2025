@@ -177,5 +177,22 @@ namespace Bringova.Services
             }
         }
 
+        public bool HasOrders(int userId)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT COUNT(*) FROM Orders WHERE user_id = @userId";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@userId", userId);
+
+                conn.Open();
+                int count = (int)cmd.ExecuteScalar();
+
+                return count > 0;
+            }
+        }
+
+
+
     }
 }

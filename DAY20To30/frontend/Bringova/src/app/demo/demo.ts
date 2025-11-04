@@ -17,7 +17,7 @@ export class Demo implements OnInit {
 
   }
  getAllUsers() {
-  this.http.get("https://localhost:7296/api/Demo").subscribe({
+  this.http.get("https://localhost:8005/api/Demo").subscribe({
     next: (result) => {
       this.userdetails.push(result)
       console.log(result);
@@ -30,7 +30,7 @@ export class Demo implements OnInit {
 
 removeitemat(id:number){
   if (confirm(`Are you sure you want to delete item at index ${id}?`)){}
-    this.http.delete("https://localhost:7296/api/User/"+id).subscribe({
+    this.http.delete("https://localhost:8005/api/User/"+id).subscribe({
       next:()=>{
         alert("successfully removed")
 

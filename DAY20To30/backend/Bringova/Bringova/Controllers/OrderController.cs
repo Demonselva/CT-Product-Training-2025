@@ -66,5 +66,17 @@ namespace Bringova.Controllers
 
             return NotFound(new { message = "Order not found" });
         }
+
+        [HttpGet("hasOrders/{userId}")]
+        public IActionResult HasOrders(int userId)
+        {
+            bool hasOrders = _orderService.HasOrders(userId);
+
+            if (hasOrders)
+                return Ok(new { message = "User has existing orders", hasOrders = true });
+
+            return Ok(new { message = "User has no orders", hasOrders = false });
+        }
+
     }
 }

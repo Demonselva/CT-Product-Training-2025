@@ -29,87 +29,97 @@
     </div>
 
 
-    <div class="sec2">
-        <div class="recent-orders d-flex justify-content-between align-items-center mb-3">
-            <h6 class="fw-bold">Orders</h6>
-            <select class="form-select w-auto">
-                <option>Recent Orders</option>
-                <option>Pending</option>
-                <option>Dispatched</option>
-            </select>
-        </div>
+   <div class="sec2">
+  <div class="recent-orders d-flex justify-content-between align-items-center mb-3">
+    <h6 class="fw-bold">Orders</h6>
 
-        <div class="table-responsive shadow-sm rounded-4">
-            <table class="table align-middle">
-                <thead class="table-light text-center">
-                    <tr>
-                        <th>ID</th>
-                        <th>Product</th>
-                        <th>Product Name</th>
-                        <th>Payment</th>
-                        <th>Address</th>
-                        <th>Quantity</th>
-                        <th>Status</th>
-                        <th>Total Price</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                @if(orders.length > 0){
-                <tbody>
-                    <tr *ngFor="let order of orders" class="align-middle text-center">
-                        <td>#{{ order.order_id }}</td>
-                        <td>{{ order.product_id }}</td>
-                        <td>{{ order.product.product_name || 'You' }}</td>
-                        <td>
-                            <span class="badge" [ngClass]="{
-                  'bg-success text-white': order.payment_status === 'Paid',
-                  'bg-danger text-white': order.payment_status === 'Not Paid',
-    
-                }">
-                                {{order.payment_status}}
-                            </span>
-                        </td>
-                        <td>{{order.address}}</td>
-                        
-                        <td>{{ order.quantity }}</td>
-                        <td>
-                            <span class="badge" [ngClass]="{
-                  'bg-warning text-dark': order.delivery_status === 'Pending',
-                  'bg-success': order.delivery_status === 'Delivered',
-                  'bg-info text-dark': order.delivery_status === 'On the Way'
-                }">
-                                {{ order.delivery_status }}
-                            </span>
-                        </td>
-                        <td>₹{{ order.total_Price }}</td>
-                        <td>
-                            <div class="dropdown">
-                                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Actions
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item text-danger "
-                                            (click)="cancelOrder(order.order_id)">Cancel Order</a></li>
-                                    <li><a class="dropdown-item" (click)="messageSeller(order)">Message</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-                }
-                @else {
+   
+    <select class="form-select w-auto" [(ngModel)]="selectedFilter" (change)="filterOrders()">
+      <option value="All">Recent Orders</option>
+      <option value="Pending">Pending</option>
+      <option value="On the Way">Dispatched</option>
+    </select>
+  </div>
 
-                <tr>
-                    <td colspan="8" class="text-center text-muted py-4">
-                        No orders found.
-                    </td>
-                </tr>
-                }
-            </table>
-        </div>
-    </div>
+  <div class="table-responsive shadow-sm rounded-4">
+    <table class="table align-middle">
+      <thead class="table-light text-center">
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Product Name</th>
+          <th>Payment</th>
+          <th>Address</th>
+          <th>Quantity</th>
+          <th>Status</th>
+          <th>Total Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      @if (filteredOrders.length > 0) {
+        <tbody>
+          @for (order of filteredOrders; track order.order_id) {
+            <tr class="align-middle text-center">
+              <td>#{{ order.order_id }}</td>
+              <td>{{ order.product_id }}</td>
+              <td>{{ order.product.product_name || 'You' }}</td>
+              <td>
+                <span class="badge"
+                  [ngClass]="{
+                    'bg-success text-white': order.payment_status === 'Paid',
+                    'bg-danger text-white': order.payment_status === 'Not Paid'
+                  }">
+                  {{ order.payment_status }}
+                </span>
+              </td>
+              <td>{{ order.address }}</td>
+              <td>{{ order.quantity }}</td>
+              <td>
+                <span class="badge"
+                  [ngClass]="{
+                    'bg-warning text-dark': order.delivery_status === 'Pending',
+                    'bg-success': order.delivery_status === 'Delivered',
+                    'bg-info text-dark': order.delivery_status === 'On the Way'
+                  }">
+                  {{ order.delivery_status }}
+                </span>
+              </td>
+              <td>₹{{ order.total_Price }}</td>
+              <td>
+                <div class="dropdown">
+                  <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Actions
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item text-danger" (click)="cancelOrder(order.order_id)">
+                        Cancel Order
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" (click)="messageSeller(order)">Message</a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      } @else {
+        <tbody>
+          <tr>
+            <td colspan="9" class="text-center text-muted py-4">
+              No orders found.
+            </td>
+          </tr>
+        </tbody>
+      }
+    </table>
+  </div>
 </div>
+
  @if(showMessageModal){
 <div class="custom-modal">
   <div class="custom-modal-content">
@@ -144,7 +154,7 @@
       </div>
 
       <div class="mb-2">
-        <!-- <label>Quantity</label> -->
+      
         <input formControlName="quantity" class="form-control" type="number" hidden />
       </div>
 

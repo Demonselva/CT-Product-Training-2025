@@ -21,6 +21,10 @@ orders: any[] = [];
   selectedOrder: any;
   orderForm!:FormGroup;
   totalorderslist: any[]=[];
+  hasOrders: boolean |null=null;
+  filteredOrders: any[] = [];  
+  selectedFilter: string = 'All';
+
   
 
   constructor(private fb: FormBuilder,private orderService: OrderService, private route: ActivatedRoute) {}
@@ -28,8 +32,9 @@ orders: any[] = [];
   ngOnInit(): void {
     this.route.parent?.params.subscribe(params => {
       this.userId = params['id'];
-      if (this.userId) this.loadOrders();
+      if (this.userId) { this.checkUserOrders(); }
     });
+   
    this.orderForm = this.fb.group({
       address: ['', Validators.required],
       payment_method: ['', Validators.required],
@@ -42,15 +47,21 @@ orders: any[] = [];
   }
 
   loadOrders(): void {
-    this.orderService.getOrdersByUserId(this.userId).subscribe({
+    if(this.hasOrders){
+      this.orderService.getOrdersByUserId(this.userId).subscribe({
       next: (res: any[]) => {
         this.orders = res.filter((order: any) => order.delivery_status !== 'Delivered');
+        this.filteredOrders = this.orders;
         this.totalorderslist=res;
         console.log(this.orders)
         this.calculateStats();
       },
       error: (err) => console.error('Error fetching orders:', err)
     });
+    }else{
+      console.log("buy product")
+    }
+    
   }
 
  calculateStats(): void {
@@ -84,8 +95,8 @@ orders: any[] = [];
   if (this.orderForm.invalid || !this.selectedOrder) return;
 
   const updatedOrder = {
-    order_id: this.selectedOrder.order_id,   // include order_id in body
-    user_id: this.userId,                    // current user
+    order_id: this.selectedOrder.order_id,   
+    user_id: this.userId,                  
     product_id: this.selectedOrder.product_id,
     address: this.orderForm.value.address,
     payment_method: this.orderForm.value.payment_method,
@@ -112,5 +123,32 @@ orders: any[] = [];
 
   closeMessageModal(): void {
     this.showMessageModal = false;
+  }
+
+  checkUserOrders() {
+    this.orderService.hasOrders(this.userId).subscribe({
+      next: (response) => {
+        this.hasOrders = response.hasOrders;
+         if (this.hasOrders) {
+        this.loadOrders(); 
+      } else {
+        console.log("buy product");
+      }
+      
+      },
+      error: (error) => {
+        console.error('Error checking user orders:', error);
+      
+      }
+    });
+}
+filterOrders() {
+    if (this.selectedFilter === 'All') {
+      this.filteredOrders = this.orders;
+    } else {
+      this.filteredOrders = this.orders.filter(
+        (order) => order.delivery_status === this.selectedFilter
+      );
+    }
   }
 }

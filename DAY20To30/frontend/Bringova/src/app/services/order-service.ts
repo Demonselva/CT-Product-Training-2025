@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class OrderService {
-  apiurl='https://localhost:7296/api/Order'
+  apiurl='http://localhost:8005/api/Order'
   constructor(private http :HttpClient){}
 getOrders(): Observable<any[]> {
   return this.http.get<any[]>(`${this.apiurl}`);
@@ -26,6 +26,9 @@ cancelOrder(orderId: number) {
 updateOrder(order : Orders):Observable<any>{
   return this.http.put(`${this.apiurl}/update`,order);
 }
+hasOrders(userId: number): Observable<any> {
+    return this.http.get<any>(`${this.apiurl}/hasOrders/${userId}`);
+  }
 
 
   

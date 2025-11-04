@@ -28,7 +28,7 @@ export class Mainlayout implements OnInit {
 
   
  getUserDetails(): void {
-  this.http.get(`https://localhost:7296/api/User/${this.userId}`).subscribe({
+  this.http.get(`http://localhost:8005/api/User/${this.userId}`).subscribe({
     next: (res: any) => {
       this.user = res;
       console.log('User details:', this.user);

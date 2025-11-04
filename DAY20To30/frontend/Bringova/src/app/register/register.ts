@@ -20,10 +20,10 @@ export class Register {
   registerForm = this.fb.group({
     username:['',Validators.required],
     email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    password: ['',[ Validators.required,Validators.minLength(8)]],
     dob:['',Validators.required],
     gender:['',Validators.required],
-    mobile_number:[0,Validators.required]
+    mobile_number:[0,[Validators.required,Validators.pattern(/^[0-9]{10}$/)]]
   });
 
  
@@ -33,7 +33,7 @@ export class Register {
       const email = this.registerForm.value.email ?? '';
     const username = this.registerForm.value.username ?? '';
 
-      // ✅ Step 1: Check if the user already exists
+    
       this.userService.checkUserExists(email, username).subscribe({
         next: (response) => {
           if (response.exists) {

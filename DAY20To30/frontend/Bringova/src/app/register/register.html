@@ -3,72 +3,112 @@
     <h2 class="text-center mb-4 fw-bold text-success">Create Account</h2>
 
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="mb-3">
-        <label class="form-label">Username</label>
-        <input
-          type="text"
-          formControlName="username"
-          class="form-control"
-          placeholder="Enter your username"
-        />
-      </div>
 
-      <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input
-          type="email"
-          formControlName="email"
-          class="form-control"
-          placeholder="Enter your email"
-        />
-      </div>
+  <div class="mb-3">
+    <label class="form-label">Username</label>
+    <input
+      type="text"
+      formControlName="username"
+      class="form-control"
+      placeholder="Enter your username"
+    />
+    @if(registerForm.get('username')?.touched && registerForm.get('username')?.invalid) {
+      <small class="text-danger">Username is required.</small>
+    }
+  </div>
 
-      <div class="mb-3">
-        <label class="form-label">Password</label>
-        <input
-          type="password"
-          formControlName="password"
-          class="form-control"
-          placeholder="Enter your password"
-        />
-      </div>
+ 
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input
+      type="email"
+      formControlName="email"
+      class="form-control"
+      placeholder="Enter your email"
+    />
+    @if(registerForm.get('email')?.touched && registerForm.get('email')?.invalid) {
+      @if(registerForm.get('email')?.errors?.['required']) {
+        <small class="text-danger">Email is required.</small>
+      }
+      @if(registerForm.get('email')?.errors?.['email']) {
+        <small class="text-danger">Enter a valid email address.</small>
+      }
+    }
+  </div>
 
-      <div class="mb-3">
-        <label class="form-label">Date of Birth</label>
-        <input
-          type="date"
-          formControlName="dob"
-          class="form-control"
-        />
-      </div>
 
-      <div class="mb-3">
-        <label class="form-label">Gender</label>
-        <select formControlName="gender" class="form-select">
-          <option value="">Select gender</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input
+      type="password"
+      formControlName="password"
+      class="form-control"
+      placeholder="Enter your password"
+    />
+    @if(registerForm.get('password')?.touched && registerForm.get('password')?.invalid) {
+      @if(registerForm.get('password')?.errors?.['required']) {
+        <small class="text-danger">Password is required.</small>
+      }
+      @if(registerForm.get('password')?.errors?.['minlength']) {
+        <small class="text-danger">Password must be at least 8 characters long.</small>
+      }
+    }
+  </div>
 
-      <div class="mb-3">
-        <label class="form-label">Mobile Number</label>
-        <input
-          type="text"
-          formControlName="mobile_number"
-          class="form-control"
-          placeholder="Enter your mobile number"
-        />
-      </div>
+ 
+  <div class="mb-3">
+    <label class="form-label">Date of Birth</label>
+    <input
+      type="date"
+      formControlName="dob"
+      class="form-control"
+    />
+    @if(registerForm.get('dob')?.touched && registerForm.get('dob')?.invalid) {
+      <small class="text-danger">Date of Birth is required.</small>
+    }
+  </div>
 
-      <button
-        class="btn btn-success w-100 py-2 fw-semibold"
-        [disabled]="registerForm.invalid"
-      >
-        Register
-      </button>
-    </form>
+ 
+  <div class="mb-3">
+    <label class="form-label">Gender</label>
+    <select formControlName="gender" class="form-select">
+      <option value="">Select gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    @if(registerForm.get('gender')?.touched && registerForm.get('gender')?.invalid) {
+      <small class="text-danger">Please select your gender.</small>
+    }
+  </div>
+
+
+  <div class="mb-3">
+    <label class="form-label">Mobile Number</label>
+    <input
+      type="text"
+      formControlName="mobile_number"
+      class="form-control"
+      placeholder="Enter your mobile number"
+    />
+    @if(registerForm.get('mobile_number')?.touched && registerForm.get('mobile_number')?.invalid) {
+      @if(registerForm.get('mobile_number')?.errors?.['required']) {
+        <small class="text-danger">Mobile number is required.</small>
+      }
+      @if(registerForm.get('mobile_number')?.errors?.['pattern']) {
+        <small class="text-danger">Mobile number must be 10 digits.</small>
+      }
+    }
+  </div>
+
+  <button
+    class="btn btn-success w-100 py-2 fw-semibold"
+    [disabled]="registerForm.invalid"
+  >
+    Register
+  </button>
+</form>
+
 
     <p class="text-center mt-3">
       Already have an account?

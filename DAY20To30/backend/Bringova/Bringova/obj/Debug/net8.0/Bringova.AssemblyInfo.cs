@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bringova")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de08db0e821b55e4bfc9807ff3d9868c7b2c9978")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d1ffd517388b8fafefaf794bb65d2d98f5a2ac3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bringova")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bringova")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

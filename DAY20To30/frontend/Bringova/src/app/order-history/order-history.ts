@@ -18,9 +18,11 @@ export class OrderHistory {
   totalOrders = 0;
   totalPending = 0;
   totalDispatch = 0;
-  
+  hasOrders: boolean |null=null;
   selectedOrder: any;
   orderForm!:FormGroup;
+   filteredOrders: any[] = [];  
+  selectedFilter: string = 'All';
   
 
   constructor(private fb: FormBuilder,private orderService: OrderService, private route: ActivatedRoute) {}
@@ -28,7 +30,7 @@ export class OrderHistory {
   ngOnInit(): void {
     this.route.parent?.params.subscribe(params => {
       this.userId = params['id'];
-      if (this.userId) this.loadOrders();
+      if (this.userId)  this.checkUserOrders();;
     
     });
    this.orderForm = this.fb.group({
@@ -43,15 +45,20 @@ export class OrderHistory {
   }
 
   loadOrders(): void {
-    this.orderService.getOrdersByUserId(this.userId).subscribe({
-      next: (res: any[]) => {
-        this.orders = res;
-       
-        
-      },
-      error: (err) => console.error('Error fetching orders:', err)
-    });
+     if(this.hasOrders){
+        this.orderService.getOrdersByUserId(this.userId).subscribe({
+          next: (res: any[]) => {
+            this.orders = res;
+          this.filteredOrders=res;
+            
+          },
+          error: (err) => console.error('Error fetching orders:', err)
+        });
+  }else{
+    console.log('buy Product');
   }
+}
+
   
   
 
@@ -111,4 +118,30 @@ export class OrderHistory {
     this.showMessageModal = false;
   }
 
+  filterOrders() {
+    if (this.selectedFilter === 'All') {
+      this.filteredOrders = this.orders;
+    } else {
+      this.filteredOrders = this.orders.filter(
+        (order) => order.delivery_status === this.selectedFilter
+      );
+    }
+  }
+   checkUserOrders() {
+    this.orderService.hasOrders(this.userId).subscribe({
+      next: (response) => {
+        this.hasOrders = response.hasOrders;
+         if (this.hasOrders) {
+        this.loadOrders(); 
+      } else {
+        console.log("buy product");
+      }
+      
+      },
+      error: (error) => {
+        console.error('Error checking user orders:', error);
+      
+      }
+    });
+}
 }

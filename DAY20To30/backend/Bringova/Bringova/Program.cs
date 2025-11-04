@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("Bringova", policy =>
     {
-        policy.WithOrigins("https://localhost:4200")
+        policy.WithOrigins("https://localhost:8002")
         .AllowAnyOrigin()
         .AllowAnyMethod()
         .AllowAnyHeader();
